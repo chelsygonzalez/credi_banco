@@ -1,0 +1,108 @@
+
+/* Esta es la seccion de las variables, para colores */
+:root {
+    --verde:rgb(127, 205, 192);
+}
+
+
+/* aqui empieza el documento */
+
+* {
+    border: solid black 1px;
+}
+
+.content-all {
+    margin: 0 auto;
+}
+
+/* HEADER */
+header {
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30em;
+    background-color: var(--verde);
+}
+
+.Logo {
+    font-family: comic-sans;
+    margin-top: 40px;
+    display: flex;
+    align-items: baseline;
+}
+
+.Logo img {
+    height: 5em;
+    width: 5em;
+}
+
+nav {
+    font-size: 1.5em;
+    margin-top: 40px;
+}
+
+nav:last-child {
+    margin-right: 0;
+}
+
+/* aqui se le hace edicion al primer input del header */
+nav input {
+    background:linear-gradient(#73bc5b, #405565);
+    padding: 0.5rem;
+    color: white;
+    border-radius: 0.6em;
+    border-color: var(--moradus);
+}
+
+
+/* desde aqui empiezan las propiedades de los link */
+a {
+    text-decoration: none;
+    margin-right: 1.250rem;
+    color: rgb(10, 11, 11);
+}
+
+a:focus {
+    color: rgb(41, 96, 41);
+}
+
+
+
+/* Edicion a la seccion de bienvenida */
+/* si definimos medidas, la responsividad falla en cierta manera */
+.Box1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 30em;
+    font-size: 1.2em;
+}
+
+
+.text-one {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin: 0 auto;
+    width: 40em;
+}
+
+.text-one h2{
+    text-align: center;
+
+}
+
+
+#content-image {
+    background-color: rgba(124, 190, 39, 0.641);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+    
+    }
+    
+#content-image img {
+    /* width: 13rem; */
+}
+
