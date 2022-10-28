@@ -1,0 +1,19 @@
+{
+    "name": "sena/credi_banco",
+    "description": "README. packaje.json",
+    "autoload": {
+        "psr-4": {
+            "Sena\\CrediBanco\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Miguel3445",
+            "email": "mglnglblandon@gmail.com"
+        }
+    ],
+    "require": {
+    	"php": ">=7.0.0",
+        "illuminate/database": "^9.37"
+    }
+}
