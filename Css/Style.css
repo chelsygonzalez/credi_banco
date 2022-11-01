@@ -1,34 +1,44 @@
 
 /* Esta es la seccion de las variables, para colores */
 :root {
-    --verde:rgb(185, 185, 185);
+    --gris:rgb(185, 185, 185);
 }
 
 
 /* aqui empieza el documento */
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
 
 * {
-    border: solid black px;
+    /* border: solid black 1px; */
 }
 
 .content-all {
     margin: 0 auto;
+    width: 1400px;
 }
 
-/* HEADER */
-header {
-    margin: 1 auto;
 
+/* encierra todos los contenedores */
+.contenido {
     display: flex;
-    justify-content: space-around;
+    justify-content:space-around;
     align-items: center;
     gap: 10em;
-    background-color: var(--verde);
 }
 
+header {
+    background-color: var(--gris);
+}
+
+
+
+
 .Logo {
-    font-family: comic-sans;
-    margin-top: 10px;
+
+    margin-top: 30px;
     display: flex;
     align-items: baseline;
 }
@@ -47,14 +57,15 @@ nav:last-child {
     margin-right: 0;
 }
 
-/* aqui se le hace edicion al primer input del header */
-nav input {
+/* use una clase para los input de boton */
+.boton {
     background:linear-gradient(#9cffc2, #358155);
     padding: 0.5rem;
     color: white;
     border-radius: 0.6em;
     border-color: var(--moradus);
 }
+
 
 
 /* desde aqui empiezan las propiedades de los link */
@@ -74,47 +85,67 @@ a:focus {
 /* si definimos medidas, la responsividad falla en cierta manera */
 .Box1 {
     display: grid;
-    margin-top: 16px;
     grid-template-columns: repeat(2, 1fr);
+    padding: 60px;
     height: 30em;
     font-size: 1.2em;
 }
 
 
+
+/* caja que contiene el texto y la imagen de la primera seccion */
 .text-one {
     display: flex;
     flex-direction: column;
     align-self: center;
     margin: 0 auto;
-    width: 40em;
+    width: 31em;
 }
 
-.text-one h2{
+h2{
     text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
 
+.text-one input {
+    width: 150px;
 }
 
 
+
+/* contenedor de la imagen de la primera seccion */
 #content-image {
-    background-color: rgba(174, 255, 178, 0.842);
      display: flex;
      justify-content: center;
      align-items: center;
     
     }
     
-#content-image img {
-    /* width: 13rem; */
+
+
+/* ========================================================================= */
+/* SEGUNDA SECCION */
+.Box2 { 
+    display: flex;
+    flex-direction: column;
 }
 
-.Box2 { 
-    margin-top: 100px;
+.Box2 h2 {
+    padding: 50px;
+}
+
+.Text-Two {
     display: flex;
     justify-content: center;
-
-   
-
-    
-    
+    gap: 10px;
 }
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+}
+
+
+
 
