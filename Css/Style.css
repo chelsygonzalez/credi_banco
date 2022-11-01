@@ -1,14 +1,14 @@
 
 /* Esta es la seccion de las variables, para colores */
 :root {
-    --verde:rgb(127, 205, 192);
+    --verde:rgb(185, 185, 185);
 }
 
 
 /* aqui empieza el documento */
 
 * {
-    border: solid black 1px;
+    border: solid black px;
 }
 
 .content-all {
@@ -17,18 +17,18 @@
 
 /* HEADER */
 header {
-    margin: 0 auto;
-    padding: 10px;
+    margin: 1 auto;
+
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 30em;
+    gap: 10em;
     background-color: var(--verde);
 }
 
 .Logo {
     font-family: comic-sans;
-    margin-top: 40px;
+    margin-top: 10px;
     display: flex;
     align-items: baseline;
 }
@@ -40,7 +40,7 @@ header {
 
 nav {
     font-size: 1.5em;
-    margin-top: 40px;
+    margin-top: 5px;
 }
 
 nav:last-child {
@@ -49,7 +49,7 @@ nav:last-child {
 
 /* aqui se le hace edicion al primer input del header */
 nav input {
-    background:linear-gradient(#73bc5b, #405565);
+    background:linear-gradient(#9cffc2, #358155);
     padding: 0.5rem;
     color: white;
     border-radius: 0.6em;
@@ -74,6 +74,7 @@ a:focus {
 /* si definimos medidas, la responsividad falla en cierta manera */
 .Box1 {
     display: grid;
+    margin-top: 16px;
     grid-template-columns: repeat(2, 1fr);
     height: 30em;
     font-size: 1.2em;
@@ -95,7 +96,7 @@ a:focus {
 
 
 #content-image {
-    background-color: rgba(124, 190, 39, 0.641);
+    background-color: rgba(174, 255, 178, 0.842);
      display: flex;
      justify-content: center;
      align-items: center;
@@ -104,5 +105,16 @@ a:focus {
     
 #content-image img {
     /* width: 13rem; */
+}
+
+.Box2 { 
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+
+   
+
+    
+    
 }
 
