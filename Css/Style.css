@@ -12,7 +12,7 @@ body {
 }
 
 * {
-    /* border: solid black 1px; */
+     border: solid black 1px; 
 }
 
 .content-all {
@@ -147,5 +147,9 @@ h1 {
 }
 
 
-
+footer { 
+    display: flex;
+    justify-content: space-around;
+    padding: 100px;
+}
 
