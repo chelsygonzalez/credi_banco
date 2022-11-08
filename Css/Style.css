@@ -2,6 +2,7 @@
 /* Esta es la seccion de las variables, para colores */
 :root {
     --gris:rgb(185, 185, 185);
+    
 }
 
 
@@ -17,7 +18,7 @@ body {
 
 .content-all {
     margin: 0 auto;
-    width: 1400px;
+    width: 1500px;
 }
 
 
@@ -27,10 +28,12 @@ body {
     justify-content:space-around;
     align-items: center;
     gap: 10em;
+    
 }
 
 header {
     background-color: var(--gris);
+    height: 210px;
 }
 
 
@@ -44,8 +47,8 @@ header {
 }
 
 .Logo img {
-    height: 5em;
-    width: 5em;
+    height: 200px;
+    width: 350px;
 }
 
 nav {
@@ -72,7 +75,7 @@ nav:last-child {
 a {
     text-decoration: none;
     margin-right: 1.250rem;
-    color: rgb(10, 11, 11);
+    color:  rgb(10, 11, 11);
 }
 
 a:focus {
@@ -87,7 +90,7 @@ a:focus {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 60px;
-    height: 30em;
+    height: 32em;
     font-size: 1.2em;
 }
 
@@ -100,6 +103,11 @@ a:focus {
     align-self: center;
     margin: 0 auto;
     width: 31em;
+}
+
+h1 {
+    display: flex;
+    margin-bottom: 25px;
 }
 
 h2{
@@ -115,10 +123,10 @@ h2{
 
 
 /* contenedor de la imagen de la primera seccion */
-#content-image {
+.content-image {
      display: flex;
-     justify-content: center;
      align-items: center;
+     margin-left: 150px;
     
     }
     
@@ -133,6 +141,12 @@ h2{
 
 .Box2 h2 {
     padding: 50px;
+}
+
+.Box2 img {
+    height: 800px;
+    margin-top: 20px;
+    
 }
 
 .Text-Two {
