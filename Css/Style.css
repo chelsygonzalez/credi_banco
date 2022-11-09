@@ -1,7 +1,7 @@
 
 /* Esta es la seccion de las variables, para colores */
 :root {
-    --gris:rgb(185, 185, 185);
+    --gris:rgb(255, 255, 255);
     
 }
 
@@ -18,7 +18,7 @@ body {
 
 .content-all {
     margin: 0 auto;
-    width: 1500px;
+    width: 1479px;
 }
 
 
@@ -32,12 +32,22 @@ body {
 }
 
 header {
+
     background-color: var(--gris);
-    height: 210px;
+    height: 150px;
 }
 
 
+.Zack {
+display: flex;
+justify-content: center;
 
+}
+
+.background img {  
+    height: 100%;
+    width: 100%;
+}
 
 .Logo {
 
@@ -47,8 +57,8 @@ header {
 }
 
 .Logo img {
-    height: 200px;
-    width: 350px;
+    height: 100px;
+    width: 250px;
 }
 
 nav {
@@ -62,9 +72,9 @@ nav:last-child {
 
 /* use una clase para los input de boton */
 .boton {
-    background:linear-gradient(#9cffc2, #358155);
-    padding: 0.5rem;
-    color: white;
+    font-size: 30px;
+    padding: 0.4rem;
+    color: rgb(0, 0, 0);
     border-radius: 0.6em;
     border-color: var(--moradus);
 }
@@ -79,7 +89,7 @@ a {
 }
 
 a:focus {
-    color: rgb(41, 96, 41);
+    color: rgb(0, 0, 0);
 }
 
 
