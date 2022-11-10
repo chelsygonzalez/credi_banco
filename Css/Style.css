@@ -2,23 +2,30 @@
 /* Esta es la seccion de las variables, para colores */
 :root {
     --gris:rgb(255, 255, 255);
-    
 }
 
 
 /* aqui empieza el documento */
 body {
-    font-family: 'Montserrat', sans-serif;
+    background-color: antiquewhite;
+    font-family:sans-serif;
     font-weight: bold;
+    margin: 0;
+    padding: 0;
 }
 
 * {
-    border: solid black px; 
+    /* border: solid black 1px;  */
 }
 
 .content-all {
     margin: 0 auto;
-    width: 1479px;
+    width: 100%;
+}
+
+.content-size {
+    margin: auto ;
+    width: 75.5em;
 }
 
 
@@ -32,22 +39,26 @@ body {
 }
 
 header {
-    
     background-color: var(--gris);
-    height: 150px;
+    width: 100%;
     box-shadow: 0px  1px 25px black;
+    position: fixed;
 }
 
 
-.Zack {
-    padding: 10px;
+.post_header {
+padding: 10px;
 display: flex;
 justify-content: center;
 
 }
 
+.post_header img {
+    margin-top: 100px;
+}
+
+
 .background {  
-    
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
@@ -58,12 +69,9 @@ justify-content: center;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
-
 }
 
 .Logo {
-
     margin-top: 30px;
     display: flex;
     align-items: baseline;
@@ -101,24 +109,19 @@ a {
     text-decoration: none;
     margin-right: 1.250rem;
     color:  rgb(10, 11, 11);
+    -webkit-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	transition:all 500ms ease;
 }
+
 
 a:focus {
     color: rgb(0, 0, 0);
 }
 
 
-
-/* Edicion a la seccion de bienvenida */
-/* si definimos medidas, la responsividad falla en cierta manera */
-
-
-
-
-
 /* caja que contiene el texto y la imagen de la primera seccion */
 .text-one { 
-    
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -187,8 +190,12 @@ h1 {
 
 
 footer { 
+
+    background-color: darkcyan;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     padding: 100px;
+    border-top: solid orangered 3px;
 }
 
