@@ -7,7 +7,7 @@
 
 /* aqui empieza el documento */
 body {
-    background-color: antiquewhite;
+    background-color: rgb(255, 255, 255);
     font-family:sans-serif;
     font-weight: bold;
     margin: 0;
@@ -25,7 +25,7 @@ body {
 
 .content-size {
     margin: auto ;
-    width: 75.5em;
+    width: 85.5em;
 }
 
 
@@ -72,7 +72,7 @@ justify-content: center;
 }
 
 .Logo {
-    margin-top: 30px;
+    margin-top: 28px;
     display: flex;
     align-items: baseline;
 }
@@ -151,9 +151,9 @@ h2{
 
 /* contenedor de la imagen de la primera seccion */
 .content-image {
-     display: flex;
-     align-items: center;
-     margin-left: 150px;
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
     
     }
     
@@ -172,9 +172,33 @@ h2{
 }
 
 .Box2 img {
-    height: 800px;
-    margin-top: 20px;
+    height: 715px;
+    width: 715px;
+    margin-top: 0px;
+    padding: 100px;
     
+}
+
+.Box3 {
+    display: flex;
+    justify-content: center;
+    
+
+}
+
+.Borderr {
+    border-top: solid orangered 3px;
+    margin-bottom: 100px;
+
+}
+
+
+
+
+
+.WhiteArbu{
+    margin-bottom: 100px;
+
 }
 
 .Text-Two {
@@ -188,10 +212,15 @@ h1 {
     font-weight: bold;
 }
 
+.Box3 img {
+    
+    width: 1800px ;
+    height: 1060px ;
+    opacity: 100%; }
 
 footer { 
 
-    background-color: darkcyan;
+    background-color: rgb(240, 240, 240);
     width: 100%;
     display: flex;
     justify-content: space-around;
