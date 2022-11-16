@@ -1,115 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+    <link rel="stylesheet" href="Css/Style.css">
+    
+    
     <title>Tick Credit: Billetera Online</title>
-    <!-- scripts -->
-    <!-- libreria jquery -->
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="/js/scripts.js"></script>
-
-    <!-- Enlace con stylos -->
-    <link rel="stylesheet" href="./Css/boot/bootstrap.min.css">
-    <link rel="stylesheet" href="./Css/Style.css">
 </head>
+
 <body>
-
-
-<main class="content-all">
-    <header> 
+    <!-- SECCION I N I C I O -->
+    <section id="inicio">
         <div class="contenido">
-            <div class="Logo">
-                <!-- <img src="Img/Tck.png" alt="logo"> -->
-                <h2>TickCredit</h2>
+            <header>
+                <div class="contenido-header">
+                    <h1>TickCredit</h1>
+                    <nav id="nav" class="nav">
+                        <ul id="links">
+                            <li><a href="#inicio" class="seleccionado" onclick="seleccionar(this)">INICIO</a></li>
+                            <li><a href="#sobremi" onclick="seleccionar(this)">FUNCIONES</a></li>
+                            <li><a href="#servicios" onclick="seleccionar(this)">SERVICIOS</a></li>
+                            <li><a href="#contacto" onclick="seleccionar(this)">CONTACTO</a></li>
+                        </ul>
+                    </nav>
+                    <div id="icono-nav" onclick="responsiveMenu()">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                    
+            </header>
+            <div class="presentacion">
+                <p class="bienvenida">Bienvenidos</p>
+                <h2> Somos <span>TickCredit</span></h2>
+                <p class="descripcion"> Una forma de guardar tu dinero y revisar el estado de el </p>
+                <a href="Credito">Ingresar</a>
             </div>
-            <nav>
-                <a href="#">Inicio</a>
-                <a href="#">Funciones & Usuarios</a>
-                <a href="#">Usuarios</a>
-            </nav>
         </div>
-    </header>
-<!-- conetenedor del documento principal -->
-<div class="content-size">
-
-
-<!-- logo del sena -->
-<div class="post_header"> 
-    <marquee behavior="alternate" scrolldelay="90" >
-        <img src="./Img/Sena.png" width="100px" height="100px" alt="">
-    </marquee>
-    
-</div>
-<hr>
-
-
-<!-- =========================================================== -->
-<div class="background">
-    <div class="contenido">
-        <section class="Box1">
-            <article class="text-one">
-                <h1>Tick Credit para Todos</h1>
-                <p id="Introduction">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae quae aspernatur fugit, at deleniti consequuntur qui rem. Aliquid eveniet cum voluptate perferendis quae.</p>
-                <input type="submit" class="boton" value="Ingresar">
-            </article>
-
-            <div class="content-image"> </div>
-        </section> 
-    </div>
-</div>
-<hr>
-
-
-<!-- seccion de la Bienvenida -->
-<!-- Primera caja -->
-<div class="Box2">
-    <h2>Nuestras Funciones</h2>
-    <section>
-            <article Class="Text-Two contenido">
-                <div class="conten">
-                    <h1>contentedor 1</h1>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima, odit mollitia natus obcaecati, dolorum placeat nesciunt repudiandae perspiciatis ducimus adipisci eius quisquam perferendis, accusamus modi ipsum asperiores iusto molestias incidunt?
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem dicta consectetur consequuntur tenetur! Error odio totam, dolorum tempora illo quas dolores commodi explicabo veritatis quisquam aliquid corporis deleniti, iste dolorem! Nostrum iure quis tenetur quas suscipit sapiente officia! Ducimus, quia?
-                </div>
-                <div id="imagen">
-                    <img src="./Img/billtera.png"  alt="">
-                </div>
-                <div class="conten">
-                    <h1>contenedor 3</h1>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis quidem unde architecto dicta, commodi veniam quibusdam dolor temporibus consequuntur labore laudantium delectus, in earum. Natus eos nulla cupiditate ab accusantium!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam illo natus animi et quo voluptatum quos qui, numquam recusandae id facere itaque sunt maiores at ab esse veritatis laborum eos voluptatibus error? Unde beatae possimus adipisci eaque dolorem quidem amet?
-                </div>
-            </article>
     </section>
-</div>
-</div>
+
+    <!-- SECCION S O B R E M I -->
+    <section id="sobremi">
+        <div class="contenedor-foto">
+            
+        </div>
+        <div class="sobremi">
+           
+            <h2>Sobre Nuestras <span>Funciones</span> </h2>
+            <h3>  Pagina Web </h3>
+            <p>Esta pagina esta diseñada para ver el estado de tru cuenta para saber cuanto dinero tienes almacenado </p>
+            <p>No podras sacar dinero o añadir por motivos de seguridad!</p>           
+        </div>
+    </section>
+
+    <section id="sobremi">
+        <div class="contenedor-foto">
+            
+        </div>
+        <div class="sobremi">         
+            <h3>  Sistema </h3>
+            <p>Nuestro sistema esta diseñado para poder almacenar dinero, reduciendo el uso de dinero en efectivo  </p>
+            <p>Tambien para solventar en parte la inseguridad de la calle, la cual no es poca precisamente</p>
+            
+        </div>
+    </section>
 
 
-
+    <!-- SECCION S E R V I C I O S -->
+    <section id="servicios">
+        <h3 class="titulo-seccion">SERVICIOS</h3>
+        <div class="fila">
+            <div class="servicio">
+                <span class="icono"> <i class="fa-solid fa-code"></i></span>
+                <h4>Almecenar Dinero</h4>
+                <hr>
+                <ul class="servicios-tag">
+                    <li>Web</li>
+                    <li>Graphic</li>
+                    <li>SEO</li>
+                </ul>
+                <p>I have been providing web design services with great success for 9 years. The client is very happy</p>
+            </div>
+            <div class="servicio">
+                <span class="icono"><i class="fa-solid fa-file-code"></i></span>
+                <h4>Comprar</h4>
+                <hr>
+                <ul class="servicios-tag">
+                    <li>Web</li>
+                    <li>Graphic</li>
+                    <li>SEO</li>
+                </ul>
+                <p>I have been providing web design services with great success for 9 years. The client is very happy</p>
+            </div>
+            <div class="servicio">
+                <span class="icono"><i class="fa-solid fa-arrow-trend-up"></i></span>
+                <h4>Historial</h4>
+                <hr>
+                <ul class="servicios-tag">
+                    <li>Web</li>
+                    <li>Graphic</li>
+                    <li>SEO</li>
+               
+                </ul>
+                <p>I have been providing web design services with great success for 9 years. The client is very happy</p>
+            </div>
+        </div>
+    </section>
 
     
-<!-- =============================================================-->
-<Section class="Borderr"></Section>
 
-<div class="Box3">
-<section class="SeccionImg" >
-    <img src="./Img/crear-empresa.jpg" alt="">
-</section>
-</div>
+    <!-- SECCION PORTAFOLIO -->
+    
 
-<Div class="WhiteArbu">
-<section>
+    <!-- SECCTION C O N T A C T O -->
+    <section id="contacto">
+        <h3 class="titulo-seccion">Contactanos ahora</h3>
+        <div class="contenedor-form">
+            <form action="">
+                <div class="fila mitad">
+                    <input type="text" placeholder="Nombre Completo *" class="input-mitad">
+                    <input type="email" placeholder="Dirección de Email" class="input-mitad">
+                </div>
+                <div class="fila">
+                    <input type="text" placeholder="Tema..." class="input-full">
+                </div>
+                <div class="fila">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Tu Mensaje..." class="input-full"></textarea>
+                </div>
 
-</section>
+                <input type="submit" value="Enviar Mensaje" class="btn-enviar">
+            </form>
+        </div>
+    </section>
 
-</Div>
+    <!-- SECCION FOOTER -->
+    <footer>
+        <p>Todos los derechos reservados - 2022</p>
+        
+        </div>
 
-<Footer> <div>Copyright</div>  <Div><button>Element</button></Div>  </Footer> 
-</main>
+    </footer>
 
+    
+    <script src="script.js"></script>
 
 </body>
+
 </html>
