@@ -13,6 +13,98 @@
         /* seccion I N I C I O */
         /* *********************/
         
+
+
+
+/* ventana modal */
+.prueba {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: none;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.contenidomodal {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.cerrar a {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    color: red;
+}
+
+
+
+/* formulario de login */
+.contenedor_login_register {
+    display: flex;
+    align-items: center;
+    /* ancho maximo */
+}
+
+.contenedor_login_register form {
+    padding: 80px 20px;
+    background: #fff;
+    border-radius: 20px;
+    width: 500px;
+
+
+}
+
+.contenedor_login_register form h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #46A2FD;
+}
+
+.contenedor_login_register form input {
+    margin-top: 20px;
+    padding: 20px;
+    border: none;
+    background: #f2f2f2;
+    font-size: 16px;
+    outline: none;
+
+}
+
+.contenedor_login_register form button {
+    padding: 10px 40px;
+    margin-top: 40px;
+    border: none;
+    font-size: 14px;
+    background: #46A2FD;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+.formulario_login {
+    opacity: 1;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.849);
+}
+
+
+
+
+
+
+
+
         #inicio {
             background: linear-gradient( rgba(0, 0, 0, 0.815), rgba(0, 0, 0, .7)), url("/Img/SenaCentroYturismo.jpg");
             background-size: cover;
@@ -27,6 +119,11 @@
             z-index: 100;
             top: 0;
             box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.849);
+        }
+
+        #logo {
+            text-decoration: none;
+            color: #d3ffdc;
         }
 
 

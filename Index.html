@@ -9,15 +9,45 @@
     
     
     <title>Tick Credit: Billetera Online</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
 </head>
 
+
+
 <body>
+
+<!-- ventana modal -->
+<div class="prueba" id="prueba">
+    <div class="contenidomodal">
+            <div class="contenedor_login_register">
+                <!-- login -->
+                <form action="../php/login_usuario_be.php" class="formulario_login" method="post">
+                    <div class="cerrar">
+                        <a href="javascript:cerrar()">
+                            X
+                        </a>
+                    </div>
+                    <h2>Iniciar Sesion</h2>
+                    <br>
+                    <input type="text" name="correo" placeholder="Correo Electronico" required>
+                    <br>
+                    <input type="text" name="contraseña" placeholder="Contraseña" required>
+                    <br>
+                    <button>Entrar</button>
+                </form>
+            </div>
+    </div>
+</div>
+
+
+
     <!-- SECCION I N I C I O -->
     <section id="inicio">
         <div class="contenido">
             <header>
                 <div class="contenido-header">
-                    <h1>TickCredit</h1>
+                    <h1><a href="#inicio" id="logo">TickCredit</a></h1>
                     <nav id="nav" class="nav">
                         <ul id="links">
                             <li><a href="#inicio" class="seleccionado" onclick="seleccionar(this)">INICIO</a></li>
@@ -35,7 +65,9 @@
                 <p class="bienvenida">Bienvenidos</p>
                 <h2> Somos <span>TickCredit</span></h2>
                 <p class="descripcion"> Una forma de guardar tu dinero y revisar el estado de el </p>
-                <a href="Credito">Ingresar</a>
+
+                <a href="javascript:abrir()">Ingresar</a>
+
             </div>
         </div>
     </section>
@@ -144,6 +176,23 @@
 
     
     <script src="script.js"></script>
+
+
+
+    <script>
+
+        function abrir() {
+            //entraaldocumento.sefijaenelid,#,leañadimosestilos
+            document.getElementById("prueba").style.display ="flex";
+        }
+                
+        function cerrar() {
+            //entraaldocumento.sefijaenelid,#,leañadimosestilos
+            document.getElementById("prueba").style.display ="none";
+        }
+        
+        
+        </script>
 
 </body>
 
