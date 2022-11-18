@@ -1,2 +1,3 @@
-# credi_banco
+# TickCredit
+
 proyecto formativo 
