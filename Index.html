@@ -9,38 +9,92 @@
     
     
     <title>Tick Credit: Billetera Online</title>
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    
 
 </head>
 
 
 
 <body>
-
+   
 <!-- ventana modal -->
 <div class="prueba" id="prueba">
-    <div class="contenidomodal">
+    <div class="contenedor__todo">
+        <div class="cerrar">
+            <a href="javascript:cerrar()">
+                X
+            </a>
+        </div>
+            <div class="caja__trasera">
+                <div class="caja__trasera-login">
+                    <h3>¿Ya tienes una cuenta?</h3>
+                    <p>Inicia sesión para entrar en la página</p>
+                    <button id="btn__iniciar-sesion">Iniciar Sesión</button>
+                </div>
+                <div class="caja__trasera-register">
+                    <h3>¿Aún no tienes una cuenta?</h3>
+                    <p>Registrate para que puedas iniciar sesión</p>
+                    <button id="btn__registrarse">Registrarse</button>
+                </div>
+            </div>
             <div class="contenedor_login_register">
                 <!-- login -->
                 <form action="../php/login_usuario_be.php" class="formulario_login" method="post">
-                    <div class="cerrar">
-                        <a href="javascript:cerrar()">
-                            X
-                        </a>
-                    </div>
-                    <h2>Iniciar Sesion</h2>
-                    <br>
-                    <input type="text" name="correo" placeholder="Correo Electronico" required>
-                    <br>
-                    <input type="text" name="contraseña" placeholder="Contraseña" required>
-                    <br>
-                    <button>Entrar</button>
+                    
+                    <h2>Iniciar sesión</h2>
+                        
+                        <div class="Contenedor-entrada">
+                            <input type="email" class="input" placeholder="a" name="correo">
+                            <label for="" class="label">Correo electrónico</label>
+                        </div>
+
+                        <div class="Contenedor-entrada">
+                            <input type="password" class="input" placeholder="a" name="contraseña">
+                            <label for="" class="label">Contraseña</label>
+                        </div>
+                        <input type="submit" class="submitBtn" value="Iniciar sesión">
                 </form>
-            </div>
+
+                    <!--Registro-->
+                <form action="insercion.php" class="formulario_register" method="post">
+                        <h2>Registrarse</h2>
+                        <div class="Contenedor-entrada">
+                            <input type="text" name="nombres" class="input" placeholder="a" required>
+                            <label for="" class="label">Nombre(s)</label>
+                        </div>
+                    
+                          <div class="Contenedor-entrada">
+                            <input type="text" name="apellidos" class="input" placeholder="a" required>
+                            <label for="" class="label">Apellido(s)</label>
+                          </div>
+                    
+                          <div class="Contenedor-entrada">
+                            <input type="text" name="identificacion" class="input" placeholder="a" required>
+                            <label for="" class="label">No. identificación</label>
+                          </div>
+                    
+                          <div class="Contenedor-entrada">
+                            <input type="email" name="correo" class="input" placeholder="a" required>
+                            <label for="" class="label">Correo</label>
+                          </div>
+                    
+                          <div class="Contenedor-entrada">
+                            <input type="password" name="contraseña" class="input" placeholder="a" required>
+                            <label for="" class="label">Contraseña</label>
+                          </div>
+                    
+                          <div class="Contenedor-entrada">
+                            <input type="password" name="c_contraseña" class="input" placeholder="a" required>
+                            <label for="" class="label">Confirmar contraseña</label>
+                          </div>
+                    
+                          <input type="submit" name="enviar" class="submitBtn" value="Registrarse">
+                </form>
+            </div>    
     </div>
 </div>
 
-
+<script src="js/scripts.js"></script>
 
     <!-- SECCION I N I C I O -->
     <section id="inicio">

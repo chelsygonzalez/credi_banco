@@ -27,14 +27,59 @@
     background-color: rgba(0, 0, 0, 0.3);
 }
 
-.contenidomodal {
-
+.contenedor__todo{
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+}
+.caja__trasera{
+    width: 100%;
+    padding: 5px 20px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 128, 255, 0.5);
+    border-radius: 20px;
+
+}
+.caja__trasera div{
+    margin: 100px 40px;
+    color: white;
+    transition: all 500ms;
+}
+.caja__trasera div p,
+.caja__trasera button{
+    margin-top: 30px;
 }
 
+.caja__trasera div h3{
+    font-weight: 400;
+    font-size: 26px;
+}
+
+.caja__trasera div p{
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.caja__trasera button{
+    padding: 10px 40px;
+    border: 2px solid #fff;
+    font-size: 14px;
+    background: transparent;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    transition: all 300ms;
+}
+
+.caja__trasera button:hover{
+    background: #fff;
+    color: #46A2FD;
+}
 
 .cerrar a {
     display: flex;
@@ -46,19 +91,25 @@
 
 
 /* formulario de login */
-.contenedor_login_register {
+.contenedor_login_register{
     display: flex;
     align-items: center;
-    /* ancho maximo */
+    width: 100%;
+    max-width: 380px;
+    position: relative;
+    top: -195px;
+    left: 10px;
+
+    /*La transicion va despues del codigo JS*/
+    transition: left 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
 }
 
-.contenedor_login_register form {
+.contenedor_login_register form{
+    width: 100%;
     padding: 80px 20px;
-    background: #fff;
-    border-radius: 20px;
-    width: 500px;
-
-
+    background: white;
+    position: absolute;
+    border-radius: 50px;
 }
 
 .contenedor_login_register form h2 {
@@ -67,36 +118,107 @@
     margin-bottom: 20px;
     color: #46A2FD;
 }
-
-.contenedor_login_register form input {
-    margin-top: 20px;
-    padding: 20px;
-    border: none;
-    background: #f2f2f2;
+.Contenedor-entrada {
+    position: relative;
+    height: 45px;
+    width: 90%;
+    margin-bottom: 17px;
+}
+.input {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #DADCE0;
+    border-radius: 7px;
     font-size: 16px;
+    padding: 0 20px;
     outline: none;
-
+    background: none;
+    z-index: 1;
 }
-
-.contenedor_login_register form button {
-    padding: 10px 40px;
-    margin-top: 40px;
-    border: none;
+::placeholder {
+    color:transparent;
+}
+.label {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 0 4px;
+    background-color: white;
+    color: #DADCE0;
+    font-size: 16px;
+    transition: 0.4s;
+    z-index: 0;
+}
+.input:focus + .label {
+    top: -7px;
+    left: 3px;
+    z-index: 10;
     font-size: 14px;
-    background: #46A2FD;
-    color: white;
-    cursor: pointer;
-    outline: none;
+    font-weight: 600;
+    color: rgb(25, 181, 209);
+}
+.input:focus {
+    border: 2px solid rgb(25, 180, 207);
 }
 
-.formulario_login {
-    opacity: 1;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.849);
+.submitBtn {
+    display: block;
+    margin-left: auto;
+    padding: 15px 30px;
+    border: none;
+    background-color: rgb(25, 180, 207);
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 30px;
 }
+
+.submitBtn:hover {
+    background-color: #0b66dd;
+    transform: translateY(-2px);
+}
+.formulario_login{
+    opacity: 1;
+    display: block;
+}
+
+.formulario_register{
+    display: none;
+}
+@media screen and (max-width: 850px){
+
+    .caja__trasera{
+        max-width: 350px;
+        height: 300px;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .caja__trasera div{
+        margin: 0px;
+        position: absolute;
+    }
+
+
+    /*Formularios*/
+
+    .contenedor_login_register{
+        top: -10px;
+        left: -5px;
+        margin: auto;
+    }
+
+    .contenedor_login_register form{
+        position: relative;
+    }
+}
+
+
+
 
 
 
