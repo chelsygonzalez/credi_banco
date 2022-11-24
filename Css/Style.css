@@ -227,6 +227,11 @@
 
 
 
+/* *********************/
+  /* seccion I N I C I O */
+  /* *********************/
+		/* esta seccion no embarca al header, esta seccion es la parte del contenedor de bienvenida */
+		
         #inicio {
             background: linear-gradient( rgba(0, 0, 0, 0.815), rgba(0, 0, 0, .7)), url("/Img/SenaCentroYturismo.jpg");
             background-size: cover;
@@ -234,50 +239,68 @@
             height: 100vh;
         }
         
+		
+		
+		/* HEADER */
+	
+
+
+		/* esta es la seccion del header */
+        /* este es el header por defecto sin responsividad */
+
         #inicio .contenido header {
             background-color: rgba(0, 0, 0, .8);
             position: fixed;
             width: 100%;
-            z-index: 100;
-            top: 0;
-            box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.849);
+			/* esta es la sombra del header */
+            box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.849);	
         }
-
-        #logo {
+		
+		
+		
+		/* esta es la propiedad del logo, (tick_credit) */
+        .logo a {
             text-decoration: none;
             color: #d3ffdc;
         }
 
 
 
-        #inicio .contenido header .contenido-header .redes a {
-            text-decoration: none;
-            color: #fff;
-            display: inline-block;
-            margin-left: 10px;
-            transition: .5s;
-        }
 
-        #inicio .contenido header .contenido-header {
+		/* esta es la seccion que alinea los elementos del nav, es el otro contenedor nav */
+        #inicio .contenido .contenido-header {
             max-width: 1200px;
+            height: 60%;
             margin: auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding:25px 20px;
+			text-transform: uppercase;
+            
         }
         
-        #inicio .contenido header .contenido-header h1 {
+		
+		/* El logo es el unico h1 del header */
+        #inicio .contenido .contenido-header h1 {
             text-align: center;
             color: #d3ffdc;
+			text-transform: capitalize;
         }
+		
         
-        #inicio .contenido header .contenido-header nav ul {
+
+		/* esta seccion encierra el nav */
+        #inicio .contenido  .contenido-header nav ul {
             list-style: none;
             display: flex;
             align-items: center;
+            
         }
         
+		
+		
+		/* los link que hay en el header */
         #inicio .contenido header .contenido-header nav ul li a {
             text-decoration: none;
             color: #fff;
@@ -286,21 +309,107 @@
             transition: .5s;
         }
         
+		
+		/* este es el hover de los link */
         #inicio .contenido header .contenido-header nav ul li a:hover {
             color: #beffe6;
         }
+		
         
        
-        
         
         #inicio .contenido header .contenido-header .redes a:hover {
             color: #ffffff;
         }
-        
+		
+		
+		
+        /* por defecto el inicio viene iluminado, aqui es donde se aplica */
         #inicio .contenido header .contenido-header .seleccionado {
             color: #beffe6; 
         }
+		
+		
+	
+	
+	
+	
+
+
+
         
+		
+		/* responsividad del header */
+		
+		@media screen and (max-width: 800px) {
+			
+			/* el header toma el 100 de vh de la pantalla y toma el 80% de vw de la pantalla */
+
+				     #inicio .contenido .contenido-header  {
+                        font-size: 16px ;
+                        top: 0;
+                        margin: 0 auto;
+                        padding:8px;
+
+                        
+				     } 
+				 
+				
+				 
+				 #inicio .contenido  .contenido-header nav ul li:last-child  {
+					 display:none;
+				 }
+
+                 
+                .contenido-header {
+                    flex-direction: column;
+                }
+
+                h1 {
+                    padding: 0;
+                }
+				
+			
+			 .contenido-header nav ul li {
+				 float: none;
+				 border-bottom: 1px solid rgba(255, 255, 255, .3);
+			 }
+		
+
+             /* cuando llegamos a 800px la responsividad debe aplicarse tambien a el text de bienvenida */
+
+             #inicio .contenido .presentacion {
+                width: 400px;
+             }
+
+		}
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         #inicio .contenido .presentacion {
             max-width: 1100px;
             height: 100vh;
@@ -608,7 +717,7 @@
         
         #contacto {
             padding: 100px 15px;
-            background-color: #f3f3f3;
+            background-color: #e7c8c8;
         }
         
         #contacto .titulo-seccion {
@@ -634,7 +743,8 @@
             padding: 20px;
             border-radius: 25px;
             border: none;
-            border: 1px solid #aaaaaa59;
+            border: 1px solid #272222;
+            color: #000;
         }
         
         #contacto .contenedor-form .mitad input {
@@ -695,32 +805,7 @@
         
         @media screen and (max-width: 800px) {
             
-            .redes {
-                display: none;
-            }
-
-            nav {
-                display: none;
-            }
-            nav.responsive {
-                display: block;
-                background-color: rgba(0, 0, 0, .8);
-                width: 100%;
-                position: absolute;
-                top: 48px;
-                left: 0;
-                padding: 10px 0;
-            }
-            nav.responsive ul {
-                display: block !important;
-                text-align: center;
-            }
-            nav.responsive ul li {
-                margin: 8   px 0;
-            }
-            #icono-nav {
-                display: block;
-            }
+            
             #inicio .contenido .presentacion h2 {
                 font-size: 40px;
             }
