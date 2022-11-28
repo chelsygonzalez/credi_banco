@@ -39,7 +39,7 @@
             </div>
             <div class="contenedor_login_register">
                 <!-- login -->
-                <form action="../php/login_usuario_be.php" class="formulario_login" method="post">
+                <form action="login_usuario.php" class="formulario_login" method="post">
                     
                     <h2>Iniciar sesión</h2>
                         
@@ -67,12 +67,24 @@
                             <input type="text" name="apellidos" class="input" placeholder="a" required>
                             <label for="" class="label">Apellido(s)</label>
                           </div>
+
+                          <div class="Contenedor-entrada">
+                            <select name="tipo_doc" id="TD">
+                                <option value="Cedula de ciudadanía">C.C</option>
+                                <option value="Tarjeta de identidad">T.I</option>   
+                            </select> 
+                          </div>
                     
                           <div class="Contenedor-entrada">
                             <input type="text" name="identificacion" class="input" placeholder="a" required>
                             <label for="" class="label">No. identificación</label>
                           </div>
-                    
+
+                          <div class="Contenedor-entrada">
+                            <input type="text" name="celular" class="input" placeholder="a" required>
+                            <label for="" class="label"> No. celular</label>
+                          </div>
+                          
                           <div class="Contenedor-entrada">
                             <input type="email" name="correo" class="input" placeholder="a" required>
                             <label for="" class="label">Correo</label>
