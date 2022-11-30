@@ -6,229 +6,233 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
     <link rel="stylesheet" href="Css/Style.css">
-    
-    
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Droid+Sans:700">
     <title>Tick Credit: Billetera Online</title>
-    
-
 </head>
 
 
-
 <body>
-   
+
 <!-- ventana modal -->
-<div class="prueba" id="prueba">
-    <div class="contenedor__todo">
-        <div class="cerrar">
-            <a href="javascript:cerrar()">
-                X
-            </a>
+<div class="modal-container">
+    <div class="modal modal-close">
+        <p class="close">X</p>
+
+        <div class="caja__trasera">
+            <div class="caja__trasera-login">
+                <h3>¿Ya tienes una cuenta?</h3>
+                <p>Inicia sesión para entrar en la página</p>
+                <button id="btn__iniciar-sesion">Iniciar Sesión</button>
+            </div>
+            <div class="caja__trasera-register">
+                <h3>¿Aún no tienes una cuenta?</h3>
+                <p>Registrate para que puedas iniciar sesión</p>
+                <button id="btn__registrarse">Registrarse</button>
+            </div>
         </div>
-            <div class="caja__trasera">
-                <div class="caja__trasera-login">
-                    <h3>¿Ya tienes una cuenta?</h3>
-                    <p>Inicia sesión para entrar en la página</p>
-                    <button id="btn__iniciar-sesion">Iniciar Sesión</button>
+
+
+        <div class="contenedor_login_register">
+            <!-- login -->
+            <form action="./php/login_usuario_be.php" class="formulario_login" method="post" autocomplete="off" name="login">
+
+                <h2>Iniciar sesión</h2>
+
+                    <div class="Contenedor-entrada">
+                        <input type="email" class="input" placeholder="" name="correo" id="correo" required>
+                        <label for="" class="label">Correo electrónico</label>
+                    </div>
+
+                    <div class="Contenedor-entrada">
+                        <input type="password" class="input" placeholder="" name="contraseña" id="contraseña" required>
+                        <label for="" class="label">Contraseña</label>
+                    </div>
+                    <input type="submit" class="submitBtn" value="Iniciar sesión">
+                    <script src="./js/valida_login.js"></script>
+            </form>
+
+                <!-- Registro -->
+            <form action="./php/registro_usuario_be.php" class="formulario_register" method="post" autocomplete="off" name="registro">
+                    <h2>Registrarse</h2>
+                    <div class="Contenedor-entrada">
+                        <input type="text" name="nombres" class="input" placeholder="" id="nombres" required>
+                        <label for="nombres" class="label">Nombre(s)</label>
+                    </div>
+
+                      <div class="Contenedor-entrada">
+                        <input type="text" name="apellidos" class="input" placeholder="" id="apellidos" required>
+                        <label for="apellidos" class="label">Apellido(s)</label>
+                      </div>
+
+                      <div class="Contenedor-entrada">
+                        <input type="text" name="identificacion" class="input" placeholder="" id="identificacion" required>
+                        <label for="identificacion" class="label">No. identificación</label>
+                      </div>
+
+                      <div class="Contenedor-entrada">
+                        <input type="text" name="celular" class="input" placeholder="" id="celular" required>
+                        <label for="celular" class="label"> No. celular</label>
+                      </div>
+
+                      <div class="Contenedor-entrada">
+                        <input type="email" name="correo" class="input" placeholder="" id="correo" required>
+                        <label for="email" class="label">Correo</label>
+                      </div>
+
+                      <div class="Contenedor-entrada">
+                        <input type="password" name="contraseña" class="input" placeholder="" id="contraseña" minlength="8" required>
+                        <label for="contraseña" class="label">Contraseña</label>
+                      </div>
+
+                      <div class="Contenedor-entrada">
+                        <input type="password" name="c_contraseña" class="input" placeholder="" id="c_contraseña" required>
+                        <label for="c_contraseña" class="label">Confirmar contraseña</label>
+                      </div>
+
+                      <input type="submit" name="enviar" class="submitBtn" value="Registrarse">
+                      <script src="./js/valida_registro.js"></script>
+            </form>
+        </div>
+    </div>
+</div> 
+
+
+ <!-- bienvenida -->
+ <section id="inicio">
+        
+    <div class="contenido">
+        <!-- SECCION DEL HEADER -->
+        <header>
+            <div class="contenido-header">
+
+                <div class="logo">
+                    <h1><a href="#inicio">TickCredit</a></h1>
                 </div>
-                <div class="caja__trasera-register">
-                    <h3>¿Aún no tienes una cuenta?</h3>
-                    <p>Registrate para que puedas iniciar sesión</p>
-                    <button id="btn__registrarse">Registrarse</button>
+                <div class="navegation">
+                    <nav>
+                        <ul>
+                            <li><a href="#inicio" class="seleccionado " onclick="seleccionar(this)">inicio</a></li>
+                            <li><a href="#sobremi" onclick="seleccionar(this)">funciones</a></li>
+                            <li><a href="#servicios" onclick="seleccionar(this)">servicios</a></li>
+                            <li><a href="#contacto" onclick="seleccionar(this)">contacto</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
-            <div class="contenedor_login_register">
-                <!-- login -->
-                <form action="login_usuario.php" class="formulario_login" method="post">
-                    
-                    <h2>Iniciar sesión</h2>
-                        
-                        <div class="Contenedor-entrada">
-                            <input type="email" class="input" placeholder="a" name="correo">
-                            <label for="" class="label">Correo electrónico</label>
-                        </div>
+        </header>
 
-                        <div class="Contenedor-entrada">
-                            <input type="password" class="input" placeholder="a" name="contraseña">
-                            <label for="" class="label">Contraseña</label>
-                        </div>
-                        <input type="submit" class="submitBtn" value="Iniciar sesión">
-                </form>
 
-                    <!--Registro-->
-                <form action="insercion.php" class="formulario_register" method="post">
-                        <h2>Registrarse</h2>
-                        <div class="Contenedor-entrada">
-                            <input type="text" name="nombres" class="input" placeholder="a" required>
-                            <label for="" class="label">Nombre(s)</label>
-                        </div>
-                    
-                          <div class="Contenedor-entrada">
-                            <input type="text" name="apellidos" class="input" placeholder="a" required>
-                            <label for="" class="label">Apellido(s)</label>
-                          </div>
+        <div class="presentacion">
+            <div class="articulop">
+                <p class="bienvenida">¡Bienvenidos!</p>
+                <h2> Somos <span>TickCredit</span></h2>
+                <p class="descripcion"> Una forma de guardar tu dinero y revisar su estado.
+                unete a nuestra novedosa billetera virtual y realiza tus compras sin contacto. </p>
+                <!-- boton de ingresar -->
+                <a href="#" class="cta">
+                <span>Ingresar
+                </span>
+                    <div class="liquid"></div>
+                </a>
+            </div>
 
-                          <div class="Contenedor-entrada">
-                            <select name="tipo_doc" id="TD">
-                                <option value="Cedula de ciudadanía">C.C</option>
-                                <option value="Tarjeta de identidad">T.I</option>   
-                            </select> 
-                          </div>
-                    
-                          <div class="Contenedor-entrada">
-                            <input type="text" name="identificacion" class="input" placeholder="a" required>
-                            <label for="" class="label">No. identificación</label>
-                          </div>
 
-                          <div class="Contenedor-entrada">
-                            <input type="text" name="celular" class="input" placeholder="a" required>
-                            <label for="" class="label"> No. celular</label>
-                          </div>
-                          
-                          <div class="Contenedor-entrada">
-                            <input type="email" name="correo" class="input" placeholder="a" required>
-                            <label for="" class="label">Correo</label>
-                          </div>
-                    
-                          <div class="Contenedor-entrada">
-                            <input type="password" name="contraseña" class="input" placeholder="a" required>
-                            <label for="" class="label">Contraseña</label>
-                          </div>
-                    
-                          <div class="Contenedor-entrada">
-                            <input type="password" name="c_contraseña" class="input" placeholder="a" required>
-                            <label for="" class="label">Confirmar contraseña</label>
-                          </div>
-                    
-                          <input type="submit" name="enviar" class="submitBtn" value="Registrarse">
-                </form>
-            </div>    
+            <div class="articulob">
+                <div class="imgen">
+                    <img src="./Img/zyro-image.png">
+                </div>
+            </div>
+        </div>
+        
     </div>
+</section>
+
+<!-- la posicion de los scripts es muy importante -->
+<script src="./js/scripts.js"></script>
+
+
+
+
+
+   
+
+  <!-- Seccion de Nuestras Funciones (sobre_mi) -->
+<div class="funciones">
+  <section id="sobremi">
+
+    <div class="sobremi">
+        <h2>Sobre Nuestras <span>Funciones</span> </h2>
+        <h3>  Pagina Web </h3>
+        <p>Esta pagina esta diseñada para que te puedas registrar y de paso podras contar con tu perfil de cliente, de esta manera podras ver el estado de tu cuenta y saber cuanto saldo tienes disponible. </p>
+        <p>Y no solo eso, tu pagina de estado tambien contara con un historial de compras(v2.0), y de esta manera sabras la hora exacta en la que se hicieron cambios a tu saldo.</p>
+    </div>
+</section>
+<section id="sobremi">
+
+    <div class="sobremi">
+        <h3>Sistema</h3>
+        <p>Tambien contamos con un sistema de gestion, especial para los administradores de la tienda, desde el cual podras sumar dinero a tus clientes y claramente tambien podras restarles cuando hagan compras en tu tienda.</p>
+        <p>Podras monitorear de forma comoda con nuestro sistema de ingresos y egresos.</p>
+    </div>
+</section>
+
+<section id="sobremi">
+
+    <div class="sobremi">         
+        <h3>  Beneficios </h3>
+        <p>Esta diseñado para poder almacenar dinero, reduciendo el uso de dinero en efectivo.</p>
+        <p>Tambien para solventar en parte la inseguridad de la calle.</p> 
+        <p>Tambien realizar las transacciones de manera mas sencilla, y por otro lado todo ira quedando registrado.</p>
+    </div>
+</section>
 </div>
 
-<script src="js/scripts.js"></script>
 
-    <!-- SECCION I N I C I O -->
-    <section id="inicio">
-        <div class="contenido">
-
-
-
-
-
-            <!-- SECCION DEL HEADER -->
-            <header>
-
-                <div class="contenido-header">
-				
-					<div class="logo">
-						<h1><a href="#inicio">TickCredit</a></h1>
-					</div>
-					<div class="navegation">
-						<nav>
-							<ul>
-								<li><a href="#inicio" class="seleccionado " onclick="seleccionar(this)">inicio</a></li> 
-								<li><a href="#sobremi" onclick="seleccionar(this)">funciones</a></li> 
-								<li><a href="#servicios" onclick="seleccionar(this)">servicios</a></li> 
-								<li><a href="#contacto" onclick="seleccionar(this)">contacto</a></li> 
-							</ul> 
-						</nav> 
-					</div>
-				</div>
-            </header>
-
-
-
-
-            <div class="presentacion">
-                <p class="bienvenida">Bienvenidos</p>
-                <h2> Somos <span>TickCredit</span></h2>
-                <p class="descripcion"> Una forma de guardar tu dinero y revisar el estado de el </p>
-
-                <a href="javascript:abrir()">Ingresar</a>
-
-            </div>
-        </div>
-    </section>
-
-
-
-
-    <!-- SECCION S O B R E M I -->
-    <section id="sobremi">
-        <div class="contenedor-foto">
-            
-        </div>
-        <div class="sobremi">
-           
-            <h2>Sobre Nuestras <span>Funciones</span> </h2>
-            <h3>  Pagina Web </h3>
-            <p>Esta pagina esta diseñada para ver el estado de tru cuenta para saber cuanto dinero tienes almacenado </p>
-            <p>No podras sacar dinero o añadir por motivos de seguridad!</p>           
-        </div>
-    </section>
-
-    <section id="sobremi">
-        <div class="contenedor-foto">
-            
-        </div>
-        <div class="sobremi">         
-            <h3>  Sistema </h3>
-            <p>Nuestro sistema esta diseñado para poder almacenar dinero, reduciendo el uso de dinero en efectivo  </p>
-            <p>Tambien para solventar en parte la inseguridad de la calle, la cual no es poca precisamente</p>
-            
-        </div>
-    </section>
-
-
-
-    
 
     <!-- SECCION SERVICIOS -->
     <section id="servicios">
         <h3 class="titulo-seccion">SERVICIOS</h3>
         <div class="fila">
             <div class="servicio">
-                 <!-- <span class="icon"> <img href="/Img/17010.jpg"></span> -->
-                <h4>Almecenar Dinero</h4>
+                <h4>Almacenar Dinero</h4>
                 <hr>
-                <ul class="servicios-tag">
+                <ul class="post">
+                    <img src="./Img/billeterav.jpg">
                 </ul>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil odit doloremque expedita veniam vero. Suscipit,
-                     sit non doloremque, laborum est inventore, aperiam cupiditate libero earum quas blanditiis.</p>
+                <p>Funcionamos a modo de billetera virtual, de este modo se reduce el uso de dinero en efectivo y con
+                 la reducción del dinero en efectivo se mejoran notablemente los tiempos de espera y atención en la tienda escolar.</p>
             </div>
             <div class="servicio">
-                <!-- <span class="icon"><img href="/Img/17010.jpg"></span> -->
                 <h4>Comprar</h4>
                 <hr>
-                <ul class="servicios-tag">
+                <ul class="post">
+                    <img src="./Img/comprar.gif" alt="comprar"/>
                 </ul>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Mollitia voluptatem earum, eaque magnam, alias aliquid non expedita adipisci ratione aliquam qui?</p>
+                <p>Al tener el dinero de manera virtual, se puede fomentar la buena administracion del dinero, realizar las compras sin contacto,
+                     lo cual reduce en gran mayoria riesgos biologicos y tambien tiempos largos a la hora de los intercambios.</p>
 
             </div>
             <div class="servicio">
-                <!-- <span class="icon"><img href="./Img/17010.jpg"></span> -->
-                <h4>Historial</h4>
+                <h4>Plataforma administrativa</h4>
                 <hr>
-                <ul class="servicios-tag">
+                <ul class="post">
+                    <img src="./Img/historial.webp">
                 </ul>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                     Numquam, unde illo reprehenderit consequatur odio harum amet iusto facere ipsum molestiae.</p>
+                <p>La plataforma de administracion ayudara en gran manera a l@s administrador@s de la tienda, este funcionara a modo de calculadora y desde alli podran realizar
+                     los depositos o egresos a las respectivas cuentas. </p>
             </div>
         </div>
     </section>
 
-    
 
-    <!-- SECCION PORTAFOLIO -->
-    
 
-    <!-- SECCTION C O N T A C T O -->
+
+
+    <!-- SECCTION contacto -->
     <section id="contacto">
         <h3 class="titulo-seccion">Contactanos ahora</h3>
         <div class="contenedor-form">
-            <form action="">
+            <form action="mailto:your_mail@gmail.com">
                 <div class="fila mitad">
                     <input type="text" placeholder="Nombre Completo *" class="input-mitad">
                     <input type="email" placeholder="Dirección de Email" class="input-mitad">
@@ -245,34 +249,24 @@
         </div>
     </section>
 
+
+
     <!-- SECCION FOOTER -->
     <footer>
         <p>Todos los derechos reservados - 2022</p>
-        
+
         </div>
 
     </footer>
-
-    
     <script src="script.js"></script>
 
+        <!-- // function abrir() {
+        //     document.getElementById("prueba").style.display ="flex";
+        // }
 
-
-    <script>
-
-        function abrir() {
-            //entraaldocumento.sefijaenelid,#,leañadimosestilos
-            document.getElementById("prueba").style.display ="flex";
-        }
-                
-        function cerrar() {
-            //entraaldocumento.sefijaenelid,#,leañadimosestilos
-            document.getElementById("prueba").style.display ="none";
-        }
-        
-        
-        </script>
-
+        // function cerrar() {
+        //     document.getElementById("prueba").style.display ="none";
+        // } -->
 </body>
 
 </html>

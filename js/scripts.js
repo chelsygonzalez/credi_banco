@@ -1,23 +1,51 @@
-//Función que me aplica el estilo a la opciòn seleccionada y quita la previamente seleccionada
-function seleccionar(link) {
-    var opciones = document.querySelectorAll('#links ');
-    opciones[0].className = "";
-    opciones[1].className = "";
-    opciones[2].className = "";
-    opciones[3].className = "";
-    opciones[4].className = "";
-    link.className = "seleccionado";
-}
 
-//función que muestra el menu responsive
-function responsiveMenu() {
-    var x = document.getElementById("nav");
-    if (x.className === "") {
-        x.className = "responsive";
-    } else {
-        x.className = "";
-    }
-}
+// ventana modal
+        let cerrar = document.querySelectorAll(".close")[0];
+        let abrir = document.querySelectorAll(".cta")[0];
+        let modal = document.querySelectorAll(".modal")[0];
+        let modalC = document.querySelectorAll(".modal-container")[0];
+
+
+
+        abrir.addEventListener("click", function abrir(e){
+            e.preventDefault();
+            modalC.style.opacity = "1";
+            modalC.style.visibility = "visible";
+            //cada que se seleccione va a quitar o a poner la clase
+            modal.classList.toggle("modal-close");
+
+        })
+
+        cerrar.addEventListener("click", function cerrar(){
+            modal.classList.toggle("modal-close");
+
+            //para que no desaparezca todo de golpe
+            setTimeout(function(){
+                modalC.style.opacity = "0";
+                modalC.style.visibility = "hidden";
+            },850)
+        })
+
+        window.addEventListener("click", function(e){
+            console.log(e.target)
+            if(e.target == modalC){
+
+                modal.classList.toggle("modal-close");
+
+                //para que no desaparezca todo de golpe
+                setTimeout(function(){
+                modalC.style.opacity = "0";
+                modalC.style.visibility = "hidden";
+            },900)   
+            }
+        })
+
+
+
+
+
+
+
 //Ejecutando funciones
 document.getElementById("btn__iniciar-sesion").addEventListener("click", iniciarSesion);
 document.getElementById("btn__registrarse").addEventListener("click", register);
@@ -84,5 +112,4 @@ anchoPage();
             caja_trasera_login.style.opacity = "1";
         }
 }
-
 

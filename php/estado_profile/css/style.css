@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap');
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat';
+}
+
+body {
+	background-color: 	#F8DE81;
+}
+
+
+.content-all {
+	margin: 0 auto;
+}
+
+
+.content-all div {
+	transition: all 500ms;
+}
+
+/*seccion del header */
+
+header {
+	background-color: rgba(0, 0, 0, .9);
+	position: block;
+	width: 100%;
+	/* esta es la sombra del header */
+	box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.849);	
+}
+
+.logo {
+	text-decoration: none;
+	color: #d3ffdc;
+	font-size: 25px;
+}
+
+.encabezado {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+}
+
+/* ============================================= */
+
+
+.content-state .Welcome {
+	padding: 10px;
+	font-size: 18px ;
+	text-align: center;
+	font-weight: bold;
+}
+
+
+/* contenedor de la seccion de todo el documento */
+.content-state {
+	margin: auto;
+	padding: 15px;
+	height: 100vh;
+}
+
+
+
+.content-state .articles-group {
+	margin: auto;
+	max-width: 1000px;
+	padding: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 70px;
+	height: auto;
+	background: #f8f5e6;
+	border-radius: 10px;
+	box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.849);	
+}
+
+
+.content-state .articles-group .image {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+.content-state .articles-group .image .push {
+	display: flex;
+	justify-content: center;
+	margin: 20px;
+}
+
+.push button {
+	padding: 10px;
+	text-decoration: none;
+	outline: none;
+	background-color: #e4cfa8;
+	cursor: pointer;
+}
+
+
+img {
+	width: 350px;
+	border-radius: 300px;
+}
+
+/* este codigo es reutilizado de el apartado de la pagina de home en sus respectivos estilos */
+.content-all .encabezado .btn-salir  {
+	text-decoration: none;
+	display: inline-block;
+	padding: 20px;
+	border: 2px solid #fff;
+	border-radius: 45px;
+	font-weight: bold;
+	text-transform: capitalize;
+	transition: .5s;
+}
+
+
+
+/* color por defecto del link */
+.content-all .encabezado .btn-salir a {
+	text-decoration: none;
+	color: #fff
+}
+
+
+/* color del link(letras) */
+.content-all .encabezado .btn-salir a:hover {
+	color: #000;
+}
+
+
+.content-all .encabezado .btn-salir:hover {
+	background-color: #beffe6;
+}
+
+
+
+
+
+
+
+/* ====================================== */
+
+/* esta es la seccion donde esta el nombre y el saldo */
+.you-money {
+	background-color: #E3DAC9;
+	padding: 50px;
+	box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.849);	
+	border-radius: 20px;
+}
+
+
+
+.you-money .money {
+	display: flex;
+	font-size: 40px;
+	padding: 20px;
+}
+
+.you-money .money .saldo {
+	display: flex;
+	justify-content: flex-start;
+}
+
+/* nombre */
+.you-money .title {
+	margin-right: 10px;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+}
+	
+	
+
+
+/* Responsividad de los elementos */
+@media screen and (max-width: 900px) {
+	.content-state .articles-group {
+		flex-direction: column;
+		gap: 0;
+		height: auto;
+		width: auto;
+	}
+}
+
+
+
+
+
+
+
+
+
+

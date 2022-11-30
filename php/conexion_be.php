@@ -1,16 +1,16 @@
 <?php
 function conn() {
-    $hostname ="localhost";
+    $hostname ="127.0.0.1:3306";
     $username="root";
-    $passworddb="";
+    //varia
+    $passworddb="root";
     $dbname="tienda";
     
     $conexion = mysqli_connect($hostname,$username,$passworddb,$dbname);
     return $conexion;
 }
 
-
-
+$conexion= conn();
 
 
 ?>

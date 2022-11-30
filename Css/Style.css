@@ -7,31 +7,77 @@
         }
         
         html {
+            /* desplazamiento a un elemento */
             scroll-behavior: smooth;
         }
-        /* *********************/
-        /* seccion I N I C I O */
-        /* *********************/
+
+
         
 
 
-
-/* ventana modal */
-.prueba {
-    margin: 0 auto;
-    width: 100%;
-    height: 100%;
+        /* *********************/
+        /* seccion I N I C I O */
+        /* *********************/
+          
+.modal-container {
+    /* escondido */
+    visibility: hidden ;
+    /* esto hara que se salga del flujo */
     position: fixed;
-    display: none;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .5);
+    display: flex;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.3);
+    align-items: center;
 }
 
+
+.close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background: #c44a4a;
+    color: white;
+    line-height: 25px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.modal {
+    /* para que nada se salga del contenedor */
+    /* overflow: hidden; */
+    /* esto para que todo tenga un espacio equitativo */
+    justify-content: space-evenly;
+    position: relative;
+    transition: transform 1s;
+    transform: translateY(0%);
+    border-radius: 10px;
+}
+
+
+.modal-close {
+    transform: translateY(-200%);
+}
+
+
+
+
+
+
+/* contenedor de los formularios */
 .contenedor__todo{
     width: 100%;
     max-width: 800px;
     margin: auto;
     position: relative;
+
 }
 .caja__trasera{
     width: 100%;
@@ -106,7 +152,7 @@
 
 .contenedor_login_register form{
     width: 100%;
-    padding: 80px 20px;
+    padding: 30px 20px;
     background: white;
     position: absolute;
     border-radius: 50px;
@@ -152,9 +198,15 @@
     background: none;
     z-index: 1;
 }
+
+
+
 ::placeholder {
-    color:transparent;
+    color:black;
 }
+
+
+/* los textos de los input */
 .label {
     position: absolute;
     top: 15px;
@@ -205,39 +257,54 @@
 .formulario_register{
     display: none;
 }
+
+
+
+/* responsividad de los formularios */
 @media screen and (max-width: 850px){
 
+
+
+
     .caja__trasera{
-        max-width: 350px;
         height: 300px;
-        flex-direction: column;
+        flex-direction: column-reverse;
         margin: auto;
     }
 
     .caja__trasera div{
         margin: 0px;
-        position: absolute;
+        /* position: relative; */
     }
 
 
     /*Formularios*/
 
     .contenedor_login_register{
-        top: -10px;
+        top: -40px;
         left: -5px;
         margin: auto;
     }
 
     .contenedor_login_register form{
         position: relative;
+        padding: 10px;
+    }
+
+    .input {
+        height: 40px;
+        padding: 10px;
+    }
+
+    .Contenedor-entrada {
+        padding: 10px;
+        height: 20px;
+    }
+
+    .submitBtn {
+        padding: 7px;
     }
 }
-
-
-
-
-
-
 
 
 
@@ -249,8 +316,10 @@
 		/* esta seccion no embarca al header, esta seccion es la parte del contenedor de bienvenida */
 		
         #inicio {
-            background: linear-gradient( rgba(0, 0, 0, 0.815), rgba(0, 0, 0, .7)), url("/Img/SenaCentroYturismo.jpg");
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, .2)),
+            url('../Img/prueba.webp');
             background-size: cover;
+            background-position: center;
             background-position: center center;
             height: 100vh;
         }
@@ -258,14 +327,17 @@
 		
 		
 		/* HEADER */
-	
-
-
 		/* esta es la seccion del header */
         /* este es el header por defecto sin responsividad */
 
         #inicio .contenido header {
-            background-color: rgba(0, 0, 0, .8);
+            /* background-color: rgba(0, 0, 0, .8); */
+            /* background-image: linear-gradient(135deg, #fcfcfc 0%, #0c63fb 100%); */
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            background-color: rgba(0, 128, 255, 0.5);
+
+
             position: fixed;
             width: 100%;
 			/* esta es la sombra del header */
@@ -279,8 +351,6 @@
             text-decoration: none;
             color: #d3ffdc;
         }
-
-
 
 
 		/* esta es la seccion que alinea los elementos del nav, es el otro contenedor nav */
@@ -332,8 +402,6 @@
         }
 		
         
-       
-        
         #inicio .contenido header .contenido-header .redes a:hover {
             color: #ffffff;
         }
@@ -346,17 +414,8 @@
         }
 		
 		
-	
-	
-	
-	
-
-
-
-        
 		
 		/* responsividad del header */
-		
 		@media screen and (max-width: 800px) {
 			
 			/* el header toma el 100 de vh de la pantalla y toma el 80% de vw de la pantalla */
@@ -369,8 +428,6 @@
 
                         
 				     } 
-				 
-				
 				 
 				 #inicio .contenido  .contenido-header nav ul li:last-child  {
 					 display:none;
@@ -390,44 +447,19 @@
 				 float: none;
 				 border-bottom: 1px solid rgba(255, 255, 255, .3);
 			 }
-		
-
-             /* cuando llegamos a 800px la responsividad debe aplicarse tambien a el text de bienvenida */
-
-             #inicio .contenido .presentacion {
-                width: 400px;
-             }
 
 		}
 
         
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         #inicio .contenido .presentacion {
-            max-width: 1100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #inicio .contenido .presentacion .articulop {
+            /* max-width: 1100px; */
             height: 100vh;
             margin: auto;
             color: #fff;
@@ -437,32 +469,37 @@
             justify-content: center;
         }
         
-        #inicio .contenido .presentacion .bienvenida {
-            font-size: 45px;
+        #inicio .contenido .presentacion .articulop .bienvenida {
+            font-size: 50px;
             margin-bottom: 20px;
             text-transform: uppercase;
-            letter-spacing: 10px;
+            letter-spacing: 7px;
         }
+
         
-        #inicio .contenido .presentacion h2 {
+        #inicio .contenido .presentacion .articulop h2 {
             font-size: 34px;
             margin-bottom: 25px;
             text-align: center;
         }
         
-        #inicio .contenido .presentacion h2 span {
+
+        /* span de tickcredit */
+        #inicio .contenido .presentacion .articulop h2 span {
             font-size: 40px;
-            color:  #beffe6; 
+            background: linear-gradient(aqua,gray);
+            -webkit-background-clip: text;
+            color: transparent;  
         }
         
-        #inicio .contenido .presentacion .descripcion {
-            max-width: 700px;
-            margin: 25px auto;
+        #inicio .contenido .presentacion .articulop .descripcion {
+            max-width: 500px;
+            margin: 16px auto;
             font-size: 18px;
-            text-align: center;
+            
         }
         
-        #inicio .contenido .presentacion a {
+        /* #inicio .contenido .presentacion a {
             text-decoration: none;
             display: inline-block;
             margin: 25px;
@@ -478,16 +515,171 @@
         #inicio .contenido .presentacion a:hover {
             background-color: #beffe6;
             color: rgb(0, 0, 0);
+        } */
+
+
+
+        /* contenedor de la imagen de la seccion de bienvenida */
+        .imgen img {
+            width: 730px ;
+            height: 700px;
+            margin: 0 auto;
+            margin-top: 40px;
+            padding: 100px;
         }
+
         
+
+
         #icono-nav {
             color: #fff;
             display: none;
         }
+
+
+
+        /* propiedades del boton liquido */
+        .cta {
+            position: relative;
+            padding: 20px 50px;
+            display: flex;
+            text-decoration: none;
+            text-transform: uppercase;
+            width: 150px;
+            height: 10px;
+            overflow: hidden;
+            border-radius: 20px;
+          }
+          
+          .cta span {
+            color: #000;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+            font-family: Arial;
+            z-index: 1;
+          }
+          
+          .cta .liquid {
+            position: absolute;
+            top: -80px;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            background: #4973ff;
+            box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
+            transition: .4s;
+          }
+          
+          .cta .liquid::after,
+          .cta .liquid::before {
+            content: '';
+            width: 200%;
+            height: 200%;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -75%);
+            background: rgba(245, 228, 228, 0);
+          }
+          
+          .cta .liquid::before {
+            
+            border-radius: 45%;
+            background: rgb(247, 245, 245);
+            animation: animate 5s linear infinite;
+          }
+          
+          .cta .liquid::after {
+            
+            border-radius: 40%;
+            background: rgba(255, 251, 251, 0.5);
+            animation: animate 10s linear infinite;
+          }
+          
+          .cta:hover .liquid{
+            top: -120px;
+          }
+          
+          @keyframes animate {
+            0% {
+              transform: translate(-50%, -75%) rotate(0deg);
+            }
+            100% {
+              transform: translate(-50%, -75%) rotate(360deg);
+            }
+          }
+
+
+          /* responsividad de la seccion inicial */
+          @media screen and (max-width: 1263px) {
+
+
+            #inicio .contenido .presentacion .articulop {
+                width: 380px;
+             }
+
+             #inicio .contenido .presentacion .articulop .bienvenida {
+                font-size: 40px;
+             }
+
+             .imgen img {
+                width: 600px;
+    
+             }
+          }
+
+
+          @media screen and (max-width: 1021px) {
+
+            #inicio {
+                background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, .2)),
+                url('../Img/responsive.jpg');
+                background-size: cover;
+                background-position: center;
+                background-position: center center;
+                height: 100vh;
+            }
+
+            #inicio .contenido .presentacion {
+                display: block;
+                overflow: hidden;
+                
+            }
+
+            #inicio .contenido .presentacion .articulop {
+               max-width: 900px;
+            }
+
+            .imgen img {
+                display: none;
+            }
+
+
+
+          }
+
+
+        
+
+
+
+
+
+          
+
+
         /* *********************/
-        /* seccion S O B R E  M I */
+        /* seccion funciones */
         /* *********************/
         
+        .funciones {
+            background-image: linear-gradient(135deg, #f1f3f6 0%, #bed3f7 100%);
+        }
+
+
         #sobremi {
             max-width: 1100px;
             margin: auto;
@@ -542,15 +734,14 @@
         
         
         
-        
         /* *********************/
-        /* seccion S E R V I C I O S */
+        /* seccion servicios */
         /* *********************/
         
         #servicios {
             padding: 120px 15px;
             text-align: center;
-            background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.486)), url(/Img/SinCity.jpeg)
+            background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.486)), url('../Img/SinCity.jpeg');
         }
         
         #servicios .titulo-seccion {
@@ -570,6 +761,8 @@
             margin: 30px auto;
         }
         
+
+        /* contenedor del post */
         #servicios .fila .servicio {
             max-width: 350px;
             background-color: #fff;
@@ -577,6 +770,7 @@
             margin: 0 5px;
             border-radius: 5px;
             transition: .5s;
+            overflow: hidden;
         }
         
         #servicios .fila .servicio:hover {
@@ -616,124 +810,26 @@
             font-size: 14px;
             line-height: 22px;
         }
+       
+
+        .post img{
+            width: 300px;
+        }
+
+
+
+
+
+
         /* *********************/
-        /* seccion S K I L L S */
-        /* *********************/
-        
-        .contenedor-skills {
-            background: linear-gradient( #eb5a5acc, rgba(33, 16, 16, 0.8)), url("img/fondo-skills.jpg");
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            background-size: cover;
-            color: #fff;
-            background-position: center center;
-            padding: 100px 0;
-            text-align: center;
-        }
-        
-        .contenedor-skills .skill {
-            max-width: 600px;
-            margin: 30px auto;
-        }
-        
-        .contenedor-skills .skill .info {
-            display: flex;
-            justify-content: space-between;
-        }
-        
-        .contenedor-skills .skill .lista {
-            display: inline-block;
-            margin-right: 20px;
-            height: 10px;
-            width: 10px;
-            background-color: #fff;
-        }
-        
-        .contenedor-skills .skill .barra {
-            background-color: #919191;
-            width: 100%;
-            height: 6px;
-            margin: 10px 0px;
-        }
-        
-        .contenedor-skills .skill .barra .barra-progreso1 {
-            background-color: #fff;
-            width: 95%;
-            height: 6px;
-            animation: progreso1 2s forwards;
-        }
-        
-        .contenedor-skills .skill .barra .barra-progreso2 {
-            background-color: #fff;
-            width: 90%;
-            height: 6px;
-            animation: progreso2 2s forwards;
-        }
-        
-        .contenedor-skills .skill .barra .barra-progreso3 {
-            background-color: #fff;
-            width: 90%;
-            height: 6px;
-            animation: progreso3 2s forwards;
-        }
-        
-        .contenedor-skills .skill .barra .barra-progreso4 {
-            background-color: #fff;
-            width: 85%;
-            height: 6px;
-            animation: progreso4 2s forwards;
-        }
-        
-        @keyframes progreso1 {
-            0% {
-                width: 0;
-            }
-            100% {
-                width: 95%;
-            }
-        }
-        
-        @keyframes progreso2 {
-            0% {
-                width: 0;
-            }
-            100% {
-                width: 90%;
-            }
-        }
-        
-        @keyframes progreso3 {
-            0% {
-                width: 0;
-            }
-            100% {
-                width: 90%;
-            }
-        }
-        
-        @keyframes progreso4 {
-            0% {
-                width: 0;
-            }
-            100% {
-                width: 85%;
-            }
-        }
-        
-        
-        
-        #portfolio .fila .proyecto:hover .info {
-            opacity: 1;
-            bottom: 0;
-            
-        }
-        /* *********************/
-        /* seccion C O N T A C T O */
+        /* seccion contacto */
         /* *********************/
         
         #contacto {
             padding: 100px 15px;
-            background-color: #e7c8c8;
+            background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+            /* background-image: url('../Img/prueba.webp'); */
+            background-size: cover;
         }
         
         #contacto .titulo-seccion {
@@ -788,17 +884,18 @@
             transition: .5s;
             padding: 10px 15px !important;
         }
-        
-/* *********************/
-        /* Boton */
-        /* *********************/
+
 
         #contacto .btn-enviar:hover {
             background-color: #beffe6;
             color: rgb(0, 0, 0);
         }
+
+
+
+
         /* *********************/
-        /* seccion F O O T E R */
+        /* seccion footer */
         /* *********************/
         
         footer {
@@ -819,13 +916,10 @@
         /* seccion R E S P O N S I V E */
         /* *********************/
         
+
         @media screen and (max-width: 800px) {
             
-            
-            #inicio .contenido .presentacion h2 {
-                font-size: 40px;
-            }
-            /* seccion SOBRE MI */
+            /* seccion funciones */
             #sobremi {
                 padding: 50px 0;
                 display: block;
@@ -849,23 +943,9 @@
                 padding: 50px 15px;
             }
             #servicios .fila {
-                display: block;
+                flex-direction: column;
             }
             #servicios .fila .servicio {
-                margin: 10px auto;
-            }
-            /* seccion HABLIDADES MI */
-            .contenedor-skills {
-                padding: 50px 20px;
-            }
-            /* seccion PORTFOLIO */
-            #portfolio {
-                padding: 50px 0;
-            }
-            #portfolio .fila {
-                display: block;
-            }
-            #portfolio .fila .proyecto {
                 margin: 10px auto;
             }
             /* seccion CONTACTO */
