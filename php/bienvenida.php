@@ -37,15 +37,88 @@ $row = $resultado->fetch_assoc();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienvenida</title>
+    <link rel="stylesheet" href="./estado_profile/css/style.css">
+  
+
 </head>
 <body>
-    <h1>Bienvenido a mi mundo</h1>
-    <a href="./estado_profile/logout.php">Cerrar sesion</a>
-    <h1>Bienvenido <?php echo $_SESSION['usuario']; ?></h1>
-    <h1>Tu nombre: <?php echo utf8_decode($row['nomb_usu']);  ?></h1>
-    <h1>Tu apellido: <?php echo utf8_decode($row['apell_usu']);  ?></h1>
-    <h1>Tu foto: <?php echo utf8_decode($row['foto_usu']);  ?></h1>
 
-    
+
+<header>
+        <div class="logo">
+            <h1><a href="#">TickCredit</a></h1>
+        </div>
+            <div class="navegation">
+                <nav>
+                    <ul>
+                        <a href="./estado_profile/logout.php"" class="cto">
+                            <span>Cerrar Sesion
+                            </span>
+                         <div class="liquid"></div>
+                        </a>
+                    </ul>
+                </nav>
+            </div>
+</header>
+
+
+<section class="content-state">
+
+        <!-- titulo -->
+        <div class="Welcome">
+             <h1>¡Bienvenido <?php echo utf8_decode($row['nomb_usu'])."!.🫡";  ?> </h1>
+        </div>
+
+
+
+    <article class="articles-group">
+    <!-- contenedor de la imagen -->
+        <div class="image">
+
+
+            <div class="photo">
+                <table border="1">
+                    <tr>
+                        <td>
+                <!-- <img src='../img/persona.webp' alt='prueba'> -->
+                        </td>
+                    </tr>
+                </table>
+            </div>
+         
+                <!-- para el boton -->
+                <div class="push">
+                    <form name="subir-foto" type="POST" enctype="multipart/formdata">
+                        <input type="file" name="imagen"/>
+                        <input type="submit" name="subir-imagen" value="Subir Imagen"/>
+                    </form>
+                </div>
+        </div>
+
+
+        <div class="you-money">
+            <div class="title">
+                <hr>
+                <h2>¡Hola <?php echo utf8_decode($row['nomb_usu']);  ?>&nbsp<?php echo utf8_decode($row['apell_usu'])."!";  ?>  </h2>
+                <br>
+                <p>Actualmente tu saldo es de:</p>
+            </div>
+
+            <!-- aqui esta el saldo -->
+            <div class="money">
+                <div class="saldo">$0</div>
+            </div>
+            
+            <hr>
+
+        </div>
+
+
+
+    </article>
+    <a href="./estado_profile/delete.php">Eliminar Cuenta</a>
+
+</section>  
+
 </body>
 </html>
