@@ -52,6 +52,7 @@ include_once('conexion_be.php');
         exit();
     }
 
+    
     $verificacion_usuario = mysqli_query($conexion, $consulta_id);
     if(mysqli_num_rows($verificacion_usuario) > 0){
         echo '

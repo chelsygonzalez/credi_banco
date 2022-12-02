@@ -70,7 +70,7 @@
     position: absolute;
 
     /* propiedad para desaparecer el modal */
-    visibility: hidden;
+    visibility: visible;
 }
 
 .close a{
