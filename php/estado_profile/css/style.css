@@ -9,12 +9,11 @@
 }
 
 body {
-	/* background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, .2)),
-	url('../../../Img/blanco.webp'); */
-	background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
-	/* background-size: cover;
+	background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, .2)),
+	url('../../../Img/blanco.webp'); 
+	 background-size: cover;
 	background-position: center;
-	background-position: center center; */
+	background-position: center center; 	
 	height: 100vh;
 }
 

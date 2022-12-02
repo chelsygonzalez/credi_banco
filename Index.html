@@ -52,7 +52,7 @@
             </form>
 
                 <!-- Registro -->
-            <form action="./php/registro_usuario_be.php" class="formulario_register" method="post" autocomplete="off" name="registro">
+            <form action="./php/registro_usuario_be.php" class="formulario_register" method="post" enctype="multipart/form-data" autocomplete="off" name="registro">
                     <h2>Registrarse</h2>
                     <div class="Contenedor-entrada">
                         <input type="text" name="nombres" class="input" placeholder="" id="nombres" required>
@@ -70,7 +70,7 @@
                       </div>
 
                       <div class="Contenedor-entrada">
-                        <input type="text" name="celular" class="input" placeholder="" id="celular" required>
+                        <input type="text" name="celular" class="input" placeholder="" id="celular" maxlength="11" required>
                         <label for="celular" class="label"> No. celular</label>
                       </div>
 

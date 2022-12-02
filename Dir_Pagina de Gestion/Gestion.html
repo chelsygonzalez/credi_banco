@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Gestion:Admin</title>
+</head>
+<body>
+<section class="content-all">
+    
+    <!-- Esta parte es la primera caja del la pagina -->
+<div class="cas">
+    <Section class="admin">
+        <div class="Id-datos">
+            <div>
+                <h1>Hola Administrador!</h1>
+                    No. Documento
+                <input type="Documento">
+            
+            </div>
+            <div class="buscarbut">
+            <a href="javascript:abrir()" class="trash">Buscar</button>
+            </div> 
+        </div>
+    </Section>
+</div>
+   
+
+<!-- Esta es la segunda caja del codigo  -->
+
+
+
+
+
+
+<!-- este es el contenedor modal -->
+<div class="modal" id="modal">
+    <Section class="contenedor2admin">
+        <div class="close">
+            <a href="javascript:cerrar()">X</a>
+        </div>
+        <div class="modalusu">Nombre:</div>
+        <div class="modalsaldo"> Saldo: </div>
+        <div class="modalfecha"> Fecha: <input type="datetime-local"></div>
+
+        <!-- Esta seccion es la parte del tipo de transaccion que se realizara -->
+
+                <section class="bloque-transaccion">
+
+                    <h2>¿Que deseas realizar? </h2>
+                    <div class="tipo-detranssaccion">
+
+                        <div class="recargar">
+                            <input type="radio">Recargar</input>
+                        </div>
+
+                        <div class="egresar">
+                            <input type="radio">Egresar</input>
+                        </div>
+                    </div>
+                </section>
+
+                    <div class="accion-end">
+                    Cantidad <input type="text">
+                    </div>
+
+                    <div class="boton-end">
+                        <button class="save-end">Guardar</button>
+                    </div>
+    </section> 
+</div>
+
+
+<script>
+     function abrir() {
+         document.getElementById("modal").style.visibility ="visible";
+        }
+
+     function cerrar() {
+          document.getElementById("modal").style.visibility ="hidden";
+         } 
+</script>
+</body>
+</html>

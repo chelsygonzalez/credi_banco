@@ -15,6 +15,12 @@ include_once('conexion_be.php');
     $celular= $_POST["celular"];
     $correo= $_POST["correo"];
     $contraseña= $_POST["contraseña"];
+    //captura de la imagen
+
+    // $imagen= base64_encode('../Img/SinCity.jpeg');
+    
+
+
 
 
     // echo  $nombres , $apellidos, $identificacion, $correo, $contraseña, $celular;

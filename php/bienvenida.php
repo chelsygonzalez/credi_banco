@@ -19,7 +19,7 @@ if(!isset($_SESSION['usuario'])) {
 $info = $_SESSION['usuario'];
 
 //sentencia sql para obtener los datos que deseo, con condicion where 
-$sql = "SELECT nomb_usu, apell_usu, foto_usu  FROM usuario WHERE correo_usu= '$info'";
+$sql = "SELECT nomb_usu, apell_usu, saldo_usu, foto_usu  FROM usuario WHERE correo_usu= '$info'";
 
 //ejecutamos la funcion query y le damos el parametro sql
 
@@ -66,7 +66,7 @@ $row = $resultado->fetch_assoc();
 
         <!-- titulo -->
         <div class="Welcome">
-             <h1>¡Bienvenido <?php echo utf8_decode($row['nomb_usu'])."!.🫡";  ?> </h1>
+             <h1>¡Bienvenido <?php echo utf8_decode($row['nomb_usu'])."!";  ?> </h1>
         </div>
 
 
@@ -80,17 +80,28 @@ $row = $resultado->fetch_assoc();
                 <table border="1">
                     <tr>
                         <td>
-                <!-- <img src='../img/persona.webp' alt='prueba'> -->
+                            <?php if(isset($row['foto_usu'])) {?>
+                                <img src="data:image;base64, <?php echo base64_encode($row['foto_usu']) ?>">
+                            <?php  
+                            }
+                            else{?>
+                                <img src="../Img/free+surreal+collage+kit.jpg">
+                            <?php } ?>
+                        
                         </td>
                     </tr>
                 </table>
             </div>
          
-                <!-- para el boton -->
+                <!-- para el boton de la subida de la foto -->
                 <div class="push">
-                    <form name="subir-foto" type="POST" enctype="multipart/formdata">
-                        <input type="file" name="imagen"/>
-                        <input type="submit" name="subir-imagen" value="Subir Imagen"/>
+
+
+                    <form name="subir-foto" action="./estado_profile/foto.php" method="POST" enctype="multipart/form-data">
+                        <!-- examinar -->
+                        <input type="file" name="nimagen" required=""/><br>
+                        <!-- actualizar -->
+                        <input type="submit" name="subir-imagen" value="Actualizar" required=""/>
                     </form>
                 </div>
         </div>
@@ -106,7 +117,7 @@ $row = $resultado->fetch_assoc();
 
             <!-- aqui esta el saldo -->
             <div class="money">
-                <div class="saldo">$0</div>
+                <div class="saldo">$<?php echo utf8_decode($row['saldo_usu']);  ?></div>
             </div>
             
             <hr>
