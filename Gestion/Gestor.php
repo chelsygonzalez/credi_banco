@@ -11,7 +11,8 @@ session_start();
 
 
 
-$consult = "SELECT id_usuario, saldo_usu, nomb_usu, saldo_usu, foto_usu FROM usuario WHERE id_usuario = '$codigo'";
+$consult = "SELECT saldo_usu, nomb_usu, saldo_usu, foto_usu FROM
+ usuario WHERE id_usuario = '$codigo'";
 
 
 $resultado = $conexion->query($consult);
@@ -38,35 +39,63 @@ $row = $resultado->fetch_assoc();
             <div class="close">
                 <a href="buscador.php">X</a>
             </div>
+
             <div class="modalusu">Nombre:<?php echo utf8_decode($row['nomb_usu'])."!";  ?></div>
-            <div class="modalsaldo"> Saldo: </div>
-            <div class="modalfecha"> Fecha: <input type="datetime-local"></div>
+            <div class="modalsaldo"> Saldo: <?php echo utf8_decode($row['saldo_usu'])."!";  ?> </div>
+            <div class="modalsaldo">Foto:  
+                <?php if(isset($row['foto_usu'])) {?>
+                                <img height="50px" src="data:image;base64, <?php echo base64_encode($row['foto_usu']) ?>">
+                        <?php  
+                        }
+                        else{?>
+                                <img height="50px" src="../Img/free+surreal+collage+kit.jpg">
+                         <?php } ?>
+            </div>
+            <!-- <div class="modalfecha"> Fecha: <input type="datetime-local"></div> -->
     
             <!-- Esta seccion es la parte del tipo de transaccion que se realizara -->
     
                     <section class="bloque-transaccion">
-    
-                        <h2>¿Que deseas realizar? </h2>
-                        <div class="tipo-detranssaccion">
-    
-                            <div class="recargar">
-                                <input type="radio">Recargar</input>
+
+
+                    <!-- formulario que contiene los radios y tambien el submit -->
+
+                        <form action="intercambio.php" method="POST" id="formulario">
+                            <h2>¿Que deseas realizar? </h2>
+                            <div class="tipo-detranssaccion">
+        
+                                <div class="recargar">
+                                    <label><input type="radio" name="action" value="recarga" id="recarga"/>Recarga</label>
+                                </div>
+        
+                                <div class="egresar">
+                                    <label><input type="radio" name="action" value="egreso" id="egreso"/>Egreso</label>
+                                </div>
+                                <input type="button" value="Borrar" onclick="limpiar();">
                             </div>
-    
-                            <div class="egresar">
-                                <input type="radio">Egresar</input>
-                            </div>
-                        </div>
                     </section>
     
-                        <div class="accion-end">
-                        Cantidad <input type="text">
-                        </div>
-    
-                        <div class="boton-end">
-                            <button class="save-end">Guardar</button>
-                        </div>
+                            <div class="accion-end">
+                            Cantidad: <input name="cantidad" type="text" >
+                            </div>
+        
+                            <div class="boton-end">
+                                <input type="submit" class="save-end">
+                            </div>
+                        </form>
+                        <a href="./delete.php">Eliminar Cuenta</a>
+
         </section> 
     </div>
+
+    
+    <script>
+        //Es necesario ya que los input de tipo radio no se pueden deseleccionar
+        function limpiar(){
+            formulario.reset();
+        }
+    </script>
+
+
 </body>
 </html>

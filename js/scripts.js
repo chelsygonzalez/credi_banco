@@ -1,5 +1,6 @@
 
 // ventana modal
+//aqui le damos la animacion de cierre y tambien el target fuera de la seccion
         let cerrar = document.querySelectorAll(".close")[0];
         let abrir = document.querySelectorAll(".cta")[0];
         let modal = document.querySelectorAll(".modal")[0];
@@ -47,6 +48,7 @@
 
 
 //Ejecutando funciones
+//Scripts para los formularios
 document.getElementById("btn__iniciar-sesion").addEventListener("click", iniciarSesion);
 document.getElementById("btn__registrarse").addEventListener("click", register);
 window.addEventListener("resize", anchoPage);

@@ -8,6 +8,8 @@
 </head>
 <body>
 <?php
+
+
 include_once('conexion_be.php');
     $nombres= $_POST["nombres"];
     $apellidos= $_POST["apellidos"];
@@ -15,15 +17,8 @@ include_once('conexion_be.php');
     $celular= $_POST["celular"];
     $correo= $_POST["correo"];
     $contraseña= $_POST["contraseña"];
-    //captura de la imagen
-
-    // $imagen= base64_encode('../Img/SinCity.jpeg');
     
 
-
-
-
-    // echo  $nombres , $apellidos, $identificacion, $correo, $contraseña, $celular;
     
     $sql= "INSERT INTO usuario (id_usuario,cel_usu, nomb_usu,apell_usu, correo_usu,contra_usu)
      VALUES  ('$identificacion','$celular', '$nombres', '$apellidos', '$correo', '$contraseña')";
@@ -72,12 +67,13 @@ include_once('conexion_be.php');
     $resul= mysqli_query($conexion, $sql);
 
 
-    if($resul) {
+    //si las variables estan llenas, se procede a ingresar al perfil
+    if (isset($resul)) {
         echo '
-            <script>
-                alert("Usuario almacenado Exitosamente");
-                window.location = "../Index.html";
-            </script>
+        <script>
+            alert("Usuario almacenado Exitosamente");
+             window.location = "../Index.html";
+        </script>
         ';
     }
     else {
@@ -87,11 +83,12 @@ include_once('conexion_be.php');
                 window.location = "../Index.html";
             </script>
         ';
+        exit();
     
     }
     
     //para cerrar la conexion
-    mysqli_close($conexion);
+    // mysqli_close($conexion);
 
 
 

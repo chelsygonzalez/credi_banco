@@ -80,7 +80,7 @@
                       </div>
 
                       <div class="Contenedor-entrada">
-                        <input type="password" name="contraseña" class="input" placeholder="" id="contraseña" minlength="8" required>
+                        <input type="password"  name="contraseña" class="input" placeholder="" id="contraseña" minlength="8" required>
                         <label for="contraseña" class="label">Contraseña</label>
                       </div>
 
@@ -232,22 +232,26 @@
     <section id="contacto">
         <h3 class="titulo-seccion">Contactanos ahora</h3>
         <div class="contenedor-form">
-            <form action="mailto:your_mail@gmail.com">
+            <form action="mailto:tickcredit@gmail.com" method="post">
                 <div class="fila mitad">
-                    <input type="text" placeholder="Nombre Completo *" class="input-mitad">
-                    <input type="email" placeholder="Dirección de Email" class="input-mitad">
+                    <input type="text" placeholder="Nombre Completo *" class="input-mitad" name="name">
+                    <input type="email" placeholder="Dirección de Email" class="input-mitad" name="email">
                 </div>
                 <div class="fila">
-                    <input type="text" placeholder="Tema..." class="input-full">
+                    <input type="text" placeholder="Tema..." class="input-full" name="asunto">
                 </div>
                 <div class="fila">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Tu Mensaje..." class="input-full"></textarea>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Tu Mensaje..." class="input-full" name="msg"></textarea>
                 </div>
 
-                <input type="submit" value="Enviar Mensaje" class="btn-enviar">
+                <input type="submit" value="Enviar Mensaje" class="btn-enviar" name="enviar">
             </form>
         </div>
     </section>
+
+    <?php
+    include_once('mail.php');
+    ?>
 
 
 

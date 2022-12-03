@@ -51,7 +51,7 @@ $row = $resultado->fetch_assoc();
             <div class="navegation">
                 <nav>
                     <ul>
-                        <a href="./estado_profile/logout.php"" class="cto">
+                        <a href="./estado_profile/logout.php" class="cto">
                             <span>Cerrar Sesion
                             </span>
                          <div class="liquid"></div>
@@ -127,7 +127,6 @@ $row = $resultado->fetch_assoc();
 
 
     </article>
-    <a href="./estado_profile/delete.php">Eliminar Cuenta</a>
 
 </section>  
 
