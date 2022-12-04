@@ -52,7 +52,7 @@ $row = $resultado->fetch_assoc();
                 <nav>
                     <ul>
                         <a href="./estado_profile/logout.php" class="cto">
-                            <span>Cerrar Sesion
+                            <span>Salir
                             </span>
                          <div class="liquid"></div>
                         </a>
@@ -66,7 +66,7 @@ $row = $resultado->fetch_assoc();
 
         <!-- titulo -->
         <div class="Welcome">
-             <h1>¡Bienvenido <?php echo utf8_decode($row['nomb_usu'])."!";  ?> </h1>
+             <h1>¡Bienvenido! <?php echo utf8_decode($row['nomb_usu'])."!";  ?> </h1>
         </div>
 
 
@@ -85,7 +85,7 @@ $row = $resultado->fetch_assoc();
                             <?php  
                             }
                             else{?>
-                                <img src="../Img/free+surreal+collage+kit.jpg">
+                                <img src="../Img/pinky89.jpg">
                             <?php } ?>
                         
                         </td>
@@ -110,7 +110,7 @@ $row = $resultado->fetch_assoc();
         <div class="you-money">
             <div class="title">
                 <hr>
-                <h2>¡Hola <?php echo utf8_decode($row['nomb_usu']);  ?>&nbsp<?php echo utf8_decode($row['apell_usu'])."!";  ?>  </h2>
+                <h2>¡Hola! <?php echo utf8_decode($row['nomb_usu']);  ?>&nbsp<?php echo utf8_decode($row['apell_usu'])."!";  ?>  </h2>
                 <br>
                 <p>Actualmente tu saldo es de:</p>
             </div>

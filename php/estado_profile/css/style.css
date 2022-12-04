@@ -9,11 +9,12 @@
 }
 
 body {
-	background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, .2)),
-	url('../../../Img/blanco.webp'); 
+	background: linear-gradient(rgba(82, 82, 82, 0.397), rgba(255, 255, 255, 0)),
+	url('../../../Img/profile.jpg'); 
 	 background-size: cover;
 	background-position: center;
 	background-position: center center; 	
+	background-attachment: fixed;
 	height: 100vh;
 }
 
@@ -32,7 +33,7 @@ body {
 header {
 	-webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    background-color: rgba(0, 128, 255, 0.5);
+    background-color: hsla(210, 100%, 50%, 0.502);
 	position: block;
 	display: flex;
 	justify-content: space-between;
@@ -65,15 +66,31 @@ header .logo a {
 /* boton de cerrar sesion */
 header .navegation .cto {
 	position: relative;
-	padding: 20px 50px;
+	padding: 15px 5px;
 	display: flex;
 	text-decoration: none;
 	text-transform: uppercase;
-	width: 150px;
-	height: 10px;
+	width: 100px;
+	height: 12px;
 	overflow: hidden;
-	border-radius: 20px;
+	letter-spacing: 2px;
+	transition: 0.3s;
+	font-size: 100px;
+	
+	
+	
 }
+
+header .navegation .cto:hover {
+	background: #0080ff;
+	box-shadow: 0px 0px 20px #0080ff, 0px 0px 40px #0080ff, 0px 0px 80px #0080ff;
+	justify-content: end;
+		
+
+}
+
+
+
 
 header .navegation .cto span {
 	color: rgb(243, 234, 234);
@@ -81,51 +98,15 @@ header .navegation .cto span {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 12px;
+	font-size: 15px;
 	font-family: Arial;
 	z-index: 1;
 }
 
-header .navegation .cto .liquid {
-	position: absolute;
-	top: -80px;
-	left: 0;
-	width: 200px;
-	height: 200px;
-	background: #bb2015;
-	box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
-	transition: .4s;
-}
 
-.cto .liquid::after,
-.cto .liquid::before {
-  content: '';
-  width: 200%;
-  height: 200%;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -75%);
-  background: rgba(245, 228, 228, 0);
-}
 
-.cto .liquid::before {
-  
-  border-radius: 45%;
-  background: rgb(24, 23, 23);
-  animation: animate 5s linear infinite;
-}
 
-.cto .liquid::after {
-  
-  border-radius: 40%;
-  background: rgba(255, 251, 251, 0.5);
-  animation: animate 10s linear infinite;
-}
 
-.cto:hover .liquid{
-  top: -120px;
-}
 
 @keyframes animate {
   0% {
@@ -149,6 +130,8 @@ header .navegation .cto .liquid {
 	font-size: 20px ;
 	text-align: center;
 	font-weight: bold;
+	color: #fffffffb;
+	
 }
 
 
@@ -170,26 +153,38 @@ header .navegation .cto .liquid {
 	flex-direction: column;
 	gap: 70px;
 	height: auto;
-	background-image: linear-gradient(to top, #dbdcd7 0%, #dddcd7 24%, #e2c9cc 30%, #e7627d 46%, #b8235a 59%, #801357 71%, #3d1635 84%, #1c1a27 100%);
-    border-radius: 20px;
-	box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.849);	
+	-webkit-backdrop-filter: blur(1000px);
+	backdrop-filter: blur(5px);
+	background-color: rgba(0, 128, 255, 0.5);
+			background-image: url(/Img/);
+    border-radius: 15px;
+	box-shadow: 0px 1px 15px rgb(0, 0, 0);	
 }
 
 
 .content-state .articles-group .image .push {
-	display: flex;
-	justify-content: center;
+	display: contents;
+	justify-content: space-around;
 	align-items: center ;
 	margin: 20px;
+	
+	
 }
 
-.push button {
+.push  input{
+	display: flex;
+	flex: content;
 	padding: 10px;
 	text-decoration: none;
 	outline: none;
-	background-color: #e4cfa8;
-	cursor: pointer;
+	background-color: #3e9efff1;
+	color: white; 
+	text-shadow: 0px 0px 1px black;
+	
+	
+	
 }
+
 
 
 .photo img {
@@ -216,6 +211,7 @@ header .navegation .cto .liquid {
 .you-money {
 	/* padding: 50px; */
 	max-width: 1200px;
+	color: white;
 
 }
 
@@ -224,6 +220,7 @@ header .navegation .cto .liquid {
 .you-money .money {
 	font-size: 40px;
 	padding: 20px;
+	color: black;
 }
 
 .you-money .money .saldo {
