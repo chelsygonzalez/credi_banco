@@ -11,12 +11,8 @@
             scroll-behavior: smooth;
         }
 
-
-        
-
-
         /* *********************/
-        /* seccion I N I C I O */
+        /* seccion de bienvenida */
         /* *********************/
           
 .modal-container {
@@ -199,6 +195,12 @@
     z-index: 1;
 }
 
+input[type="number"]{
+    -webkit-appearance: textfield !important;
+    margin: 0;
+    -moz-appearance:textfield !important;
+}
+
 
 
 ::placeholder {
@@ -264,8 +266,6 @@
 @media screen and (max-width: 850px){
 
 
-
-
     .caja__trasera{
         height: 300px;
         flex-direction: column-reverse;
@@ -311,7 +311,7 @@
 
 
 /* *********************/
-  /* seccion I N I C I O */
+  /* seccion bienvenida */
   /* *********************/
 		/* esta seccion no embarca al header, esta seccion es la parte del contenedor de bienvenida */
 		
@@ -324,8 +324,6 @@
             height: 100vh;
         }
         
-		
-		
 		/* HEADER */
 		/* esta es la seccion del header */
         /* este es el header por defecto sin responsividad */
@@ -425,8 +423,6 @@
                         top: 0;
                         margin: 0 auto;
                         padding:8px;
-
-                        
 				     } 
 				 
 				 #inicio .contenido  .contenido-header nav ul li:last-child  {
@@ -495,28 +491,8 @@
         #inicio .contenido .presentacion .articulop .descripcion {
             max-width: 500px;
             margin: 16px auto;
-            font-size: 18px;
-            
+            font-size: 18px;  
         }
-        
-        /* #inicio .contenido .presentacion a {
-            text-decoration: none;
-            display: inline-block;
-            margin: 25px;
-            padding: 20px 25px;
-            border: 2px solid #fff;
-            border-radius: 45px;
-            color: #fff;
-            font-weight: bold;
-            text-transform: uppercase;
-            transition: .5s;
-        }
-        
-        #inicio .contenido .presentacion a:hover {
-            background-color: #beffe6;
-            color: rgb(0, 0, 0);
-        } */
-
 
 
         /* contenedor de la imagen de la seccion de bienvenida */
@@ -529,8 +505,6 @@
         }
 
         
-
-
         #icono-nav {
             color: #fff;
             display: none;
@@ -560,6 +534,10 @@
             font-size: 12px;
             font-family: Arial;
             z-index: 1;
+          }
+
+          .cta span:hover {
+            color: #fff;
           }
           
           .cta .liquid {
@@ -601,6 +579,7 @@
           
           .cta:hover .liquid{
             top: -120px;
+            color: #fff;
           }
           
           @keyframes animate {
@@ -613,6 +592,7 @@
           }
 
 
+
           /* responsividad de la seccion inicial */
           @media screen and (max-width: 1263px) {
 
@@ -622,7 +602,7 @@
              }
 
              #inicio .contenido .presentacion .articulop .bienvenida {
-                font-size: 40px;
+                font-size: 37px;
              }
 
              .imgen img {
@@ -656,20 +636,7 @@
             .imgen img {
                 display: none;
             }
-
-
-
           }
-
-
-        
-
-
-
-
-
-          
-
 
         /* *********************/
         /* seccion funciones */
@@ -712,7 +679,6 @@
         
         #sobremi .sobremi h2 span {
             color: #000000; 
-           /*text-shadow: 0px 1px 3px #000;*/
         }
         
         #sobremi .sobremi h3 {
@@ -729,9 +695,6 @@
             color: #525252;
             margin-bottom: 12px;
         }
-        
-        
-        
         
         
         /* *********************/
@@ -811,14 +774,9 @@
             line-height: 22px;
         }
        
-
         .post img{
             width: 300px;
         }
-
-
-
-
 
 
         /* *********************/
@@ -828,7 +786,6 @@
         #contacto {
             padding: 100px 15px;
             background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
-            /* background-image: url('../Img/prueba.webp'); */
             background-size: cover;
         }
         
@@ -911,11 +868,10 @@
             margin: 5px;
             font-size: 26px;
         }
-        /* *********************/
-        /* seccion R E S P O N S I V E */
-        /* *********************/
+        /* *****************************/
+        /* seccion de la responsividad*/
+        /* ***************************/
         
-
         @media screen and (max-width: 800px) {
             
             /* seccion funciones */
@@ -937,7 +893,7 @@
                 font-size: 25px;
                 text-align: center;
             }
-            /* seccion MIS SERVICIOS */
+            /* seccion servicios */
             #servicios {
                 padding: 50px 15px;
             }
@@ -947,7 +903,7 @@
             #servicios .fila .servicio {
                 margin: 10px auto;
             }
-            /* seccion CONTACTO */
+            /* seccion contacto */
             #contacto {
                 padding: 50px 15px;
             }

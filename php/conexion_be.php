@@ -5,12 +5,8 @@ function conn() {
     //varia
     $passworddb="root";
     $dbname="tienda";
-    
     $conexion = mysqli_connect($hostname,$username,$passworddb,$dbname);
     return $conexion;
 }
-
 $conexion= conn();
-
-
 ?>

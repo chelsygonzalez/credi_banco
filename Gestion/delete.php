@@ -18,6 +18,7 @@ if(!isset($_SESSION['usuario'])) {
 
 }
 
+
 $info = $_SESSION['usuario'];
 
 $dates = "SELECT correo_usu FROM usuario WHERE id_usuario = '$info'";
@@ -45,7 +46,6 @@ $rcrdel = mysqli_query($conexion, $deletercr);
 
     //valido si todas las opciones son True
     if($txdel &&  $rcrdel && $bye) {
-
         echo '
         <script>
             alert("¡Gracias por usar nuestra aplicacion! Bye ❤️❤️");

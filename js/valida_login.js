@@ -1,6 +1,5 @@
 
 // debido a que tenemos un required en los formularios estas validaciones pueden quedar desapercibidas
-
 with(document.login){
 	onsubmit = function(e){
 		e.preventDefault();

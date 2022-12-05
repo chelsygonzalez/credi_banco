@@ -42,11 +42,6 @@
         })
 
 
-
-
-
-
-
 //Ejecutando funciones
 //Scripts para los formularios
 document.getElementById("btn__iniciar-sesion").addEventListener("click", iniciarSesion);

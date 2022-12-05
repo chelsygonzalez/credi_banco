@@ -1,8 +1,6 @@
 <?php
-
 include_once ('../conexion_be.php');
 session_start();
-
 if(!isset($_SESSION['usuario'])) {
     echo '
     <script>
@@ -12,11 +10,8 @@ if(!isset($_SESSION['usuario'])) {
     ';
     session_destroy(); //para que muera la sesion aqui
     die(); //para que el codigo se detenga aqui
-
 }
-
 $info = $_SESSION['usuario'];
-
 
 //valida si realmente hay algo dentro de la variable
 if (isset($_FILES['nimagen'])) {
@@ -24,15 +19,9 @@ if (isset($_FILES['nimagen'])) {
     $picture = file_get_contents($fileName);
    }
 
-   
-
    $imagen= addslashes(file_get_contents($_FILES['nimagen']['tmp_name']));
-  
-
 $query= "UPDATE usuario SET foto_usu = '$imagen' WHERE correo_usu = '$info'";
-
 $update= mysqli_query($conexion, $query);
-
 
 if ($update) {
     echo '
@@ -42,7 +31,7 @@ if ($update) {
     </script>
     ';
 }else{
-    echo "fallo la inserccion";
+    echo "fallo la actualización.";
 }
 
 ?>
