@@ -2,15 +2,15 @@ CREATE DATABASE tienda;
 USE tienda;
 
 
-CREATE TABLE usuario (correo_usu varchar(40) NOT NULL, id_usuario int(20) DEFAULT NULL, nomb_usu varchar(30) NOT NULL DEFAULT '',
-apell_usu varchar(30) DEFAULT NULL, cel_usu varchar(11) DEFAULT NULL, contra_usu varchar(40) NOT NULL,
+CREATE TABLE usuario (correo_usu varchar(255) NOT NULL, id_usuario int(40) DEFAULT NULL, nomb_usu varchar(155) NOT NULL DEFAULT '',
+apell_usu varchar(155) DEFAULT NULL, cel_usu varchar(20) DEFAULT NULL, contra_usu varchar(60) NOT NULL,
 saldo_usu decimal(18, 0) unsigned DEFAULT '0.00',
 foto_usu longblob, PRIMARY KEY (correo_usu)) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- ======================================================================================== --
 
-CREATE TABLE empleado (correo_emp varchar(40) NOT NULL, nom_emple varchar(25) NOT NULL, 
-apell_emp varchar(25) DEFAULT NULL, cel_emple int(10) DEFAULT NULL, id_centro1 varchar(20) DEFAULT NULL,
+CREATE TABLE empleado (correo_emp varchar(255) NOT NULL, nom_emple varchar(155) NOT NULL, 
+apell_emp varchar(155) DEFAULT NULL, cel_emple int(20) DEFAULT NULL, Tienda_emple VARCHAR(255) DEFAULT NULL,
 contra_emp varchar(30) DEFAULT NULL, cedu_emp int(20) DEFAULT NULL,
 PRIMARY KEY (correo_emp)) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 

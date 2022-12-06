@@ -289,6 +289,7 @@ input[type="number"]{
     .contenedor_login_register form{
         position: relative;
         padding: 10px;
+        border-radius: 10px;
     }
 
     .input {
@@ -404,56 +405,39 @@ input[type="number"]{
             color: #ffffff;
         }
 		
-		
-		
         /* por defecto el inicio viene iluminado, aqui es donde se aplica */
         #inicio .contenido header .contenido-header .seleccionado {
             color: #beffe6; 
         }
-		
-		
-		
 		/* responsividad del header */
 		@media screen and (max-width: 800px) {
-			
 			/* el header toma el 100 de vh de la pantalla y toma el 80% de vw de la pantalla */
-
 				     #inicio .contenido .contenido-header  {
                         font-size: 16px ;
                         top: 0;
                         margin: 0 auto;
                         padding:8px;
 				     } 
-				 
 				 #inicio .contenido  .contenido-header nav ul li:last-child  {
 					 display:none;
 				 }
-
-                 
                 .contenido-header {
                     flex-direction: column;
                 }
-
                 h1 {
                     padding: 0;
                 }
-				
-			
 			 .contenido-header nav ul li {
 				 float: none;
 				 border-bottom: 1px solid rgba(255, 255, 255, .3);
 			 }
 
 		}
-
-        
-
         #inicio .contenido .presentacion {
             display: flex;
             justify-content: center;
             align-items: center;
         }
-
         #inicio .contenido .presentacion .articulop {
             /* max-width: 1100px; */
             height: 100vh;
@@ -464,22 +448,17 @@ input[type="number"]{
             align-items: center;
             justify-content: center;
         }
-        
         #inicio .contenido .presentacion .articulop .bienvenida {
             font-size: 50px;
             margin-bottom: 20px;
             text-transform: uppercase;
             letter-spacing: 7px;
         }
-
-        
         #inicio .contenido .presentacion .articulop h2 {
             font-size: 34px;
             margin-bottom: 25px;
             text-align: center;
         }
-        
-
         /* span de tickcredit */
         #inicio .contenido .presentacion .articulop h2 span {
             font-size: 40px;
@@ -487,14 +466,11 @@ input[type="number"]{
             -webkit-background-clip: text;
             color: transparent;  
         }
-        
         #inicio .contenido .presentacion .articulop .descripcion {
             max-width: 500px;
             margin: 16px auto;
             font-size: 18px;  
         }
-
-
         /* contenedor de la imagen de la seccion de bienvenida */
         .imgen img {
             width: 730px ;
@@ -503,19 +479,14 @@ input[type="number"]{
             margin-top: 40px;
             padding: 100px;
         }
-
-        
         #icono-nav {
             color: #fff;
             display: none;
         }
-
-
-
         /* propiedades del boton liquido */
         .cta {
             position: relative;
-            padding: 20px 50px;
+            padding: 20px 41px;
             display: flex;
             text-decoration: none;
             text-transform: uppercase;
@@ -524,22 +495,16 @@ input[type="number"]{
             overflow: hidden;
             border-radius: 20px;
           }
-          
           .cta span {
             color: #000;
             font-weight: bold;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 12px;
+            font-size: 15px;
             font-family: Arial;
             z-index: 1;
           }
-
-          .cta span:hover {
-            color: #fff;
-          }
-          
           .cta .liquid {
             position: absolute;
             top: -80px;
@@ -550,7 +515,6 @@ input[type="number"]{
             box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
             transition: .4s;
           }
-          
           .cta .liquid::after,
           .cta .liquid::before {
             content: '';
@@ -562,26 +526,19 @@ input[type="number"]{
             transform: translate(-50%, -75%);
             background: rgba(245, 228, 228, 0);
           }
-          
           .cta .liquid::before {
-            
             border-radius: 45%;
             background: rgb(247, 245, 245);
             animation: animate 5s linear infinite;
           }
-          
           .cta .liquid::after {
-            
             border-radius: 40%;
             background: rgba(255, 251, 251, 0.5);
             animation: animate 10s linear infinite;
           }
-          
           .cta:hover .liquid{
             top: -120px;
-            color: #fff;
           }
-          
           @keyframes animate {
             0% {
               transform: translate(-50%, -75%) rotate(0deg);
@@ -590,49 +547,34 @@ input[type="number"]{
               transform: translate(-50%, -75%) rotate(360deg);
             }
           }
-
-
-
           /* responsividad de la seccion inicial */
           @media screen and (max-width: 1263px) {
-
-
             #inicio .contenido .presentacion .articulop {
                 width: 380px;
              }
-
              #inicio .contenido .presentacion .articulop .bienvenida {
                 font-size: 37px;
              }
-
              .imgen img {
                 width: 600px;
-    
              }
           }
-
-
           @media screen and (max-width: 1021px) {
-
             #inicio {
                 background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, .2)),
-                url('../Img/responsive.jpg');
+                url('../Img/prueba.webp');
                 background-size: cover;
                 background-position: center;
                 background-position: center center;
                 height: 100vh;
             }
-
             #inicio .contenido .presentacion {
                 display: block;
-                overflow: hidden;
-                
+                overflow: hidden;  
             }
-
             #inicio .contenido .presentacion .articulop {
                max-width: 900px;
             }
-
             .imgen img {
                 display: none;
             }
@@ -641,12 +583,9 @@ input[type="number"]{
         /* *********************/
         /* seccion funciones */
         /* *********************/
-        
         .funciones {
             background-image: linear-gradient(135deg, #f1f3f6 0%, #bed3f7 100%);
         }
-
-
         #sobremi {
             max-width: 1100px;
             margin: auto;
@@ -654,13 +593,9 @@ input[type="number"]{
             color: #111135;
             display: flex;
         }
-        
-       
-        
         #sobremi .sobremi {
             margin: 35px;
         }
-        
         #sobremi .sobremi .titulo-seccion {
             font-size: 22px;
             text-transform: uppercase;
@@ -676,11 +611,9 @@ input[type="number"]{
             margin-bottom: 2cm;
             letter-spacing: 2px;
         }
-        
         #sobremi .sobremi h2 span {
             color: #000000; 
         }
-        
         #sobremi .sobremi h3 {
             font-size: 30px;
             font-weight: 500;
@@ -688,15 +621,12 @@ input[type="number"]{
             margin-bottom: 20px;
             letter-spacing: 1px;
         }
-        
         #sobremi .sobremi p {
             font-size: 20px;
             line-height: 25px;
             color: #525252;
             margin-bottom: 12px;
         }
-        
-        
         /* *********************/
         /* seccion servicios */
         /* *********************/

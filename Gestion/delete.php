@@ -20,7 +20,6 @@ if(!isset($_SESSION['usuario'])) {
 
 
 $info = $_SESSION['usuario'];
-
 $dates = "SELECT correo_usu FROM usuario WHERE id_usuario = '$info'";
 $consult = $conexion->query($dates);
 $dates = $consult->fetch_assoc();

@@ -33,7 +33,7 @@ $row = $resultado->fetch_assoc();
                         <?php  
                         }
                         else{?>
-                                <img height="100px" src="../Img/free+surreal+collage+kit.jpg">
+                                <img height="100px" src="../Img/pinky89.jpg">
                          <?php } ?>
             </div>
             <!-- Esta seccion es la parte del tipo de transaccion que se realizara -->
