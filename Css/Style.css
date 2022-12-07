@@ -369,11 +369,7 @@ input[type="number"]{
         #inicio .contenido header .contenido-header .redes a:hover {
             color: #ffffff;
         }
-		
-        /* por defecto el inicio viene iluminado, aqui es donde se aplica */
-        #inicio .contenido header .contenido-header .seleccionado {
-            color: #beffe6; 
-        }
+	
 		/* responsividad del header */
 		@media screen and (max-width: 800px) {
 			/* el header toma el 100 de vh de la pantalla y toma el 80% de vw de la pantalla */

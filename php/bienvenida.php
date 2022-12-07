@@ -281,7 +281,7 @@ $row = $resultado->fetch_assoc();
                             <?php  
                             }
                             else{?>
-                                <img src="../Img/pinky89.jpg">
+                                <img src="../Img/predeterminada.jpg">
                         <?php } ?>
             </div>
                 <!-- para el boton de la subida de la foto -->
