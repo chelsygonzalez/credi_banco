@@ -1,9 +1,9 @@
 <?php
 function conn() {
-    $hostname ="127.0.0.1:3306";
+    $hostname ="127.0.0.1:3308";
     $username="root";
     //varia
-    $passworddb="root";
+    $passworddb="";
     $dbname="tienda";
     
     $conexion = mysqli_connect($hostname,$username,$passworddb,$dbname);

@@ -33,39 +33,20 @@
 
 
 .close {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-    background: #c44a4a;
-    color: white;
-    line-height: 25px;
-    cursor: pointer;
-    border-radius: 50%;
+    display: none;
+
 }
 
 .modal {
-    /* para que nada se salga del contenedor */
-    /* overflow: hidden; */
-    /* esto para que todo tenga un espacio equitativo */
     justify-content: space-evenly;
     position: relative;
     transition: transform 1s;
     transform: translateY(0%);
     border-radius: 10px;
 }
-
-
 .modal-close {
     transform: translateY(-200%);
 }
-
-
-
-
-
 
 /* contenedor de los formularios */
 .contenedor__todo{
@@ -81,8 +62,8 @@
     display: flex;
     justify-content: center;
     -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    background-color: rgba(0, 128, 255, 0.5);
+    backdrop-filter: blur(1px);
+    background-color: rgba(83, 127, 36, 0.5);
     border-radius: 20px;
 
 }
@@ -116,18 +97,17 @@
     color: white;
     outline: none;
     transition: all 300ms;
+    border-radius: 20px 100px 15px;
+
 }
 
 .caja__trasera button:hover{
     background: #fff;
-    color: #46A2FD;
+    color: rgb(122, 120, 40);
 }
 
 .cerrar a {
-    display: flex;
-    justify-content: flex-end;
-    padding: 10px;
-    color: red;
+    display: none;
 }
 
 
@@ -151,14 +131,14 @@
     padding: 30px 20px;
     background: white;
     position: absolute;
-    border-radius: 50px;
+    border-radius: 20px;
 }
 
 .contenedor_login_register form h2 {
     font-size: 30px;
     text-align: center;
     margin-bottom: 20px;
-    color: #46A2FD;
+    color:rgb(63, 63, 33);
 }
 .Contenedor-entrada {
     position: relative;
@@ -215,7 +195,7 @@ input[type="number"]{
     left: 15px;
     padding: 0 4px;
     background-color: white;
-    color: #DADCE0;
+    color: #8d8d9c;
     font-size: 16px;
     transition: 0.4s;
     z-index: 0;
@@ -229,17 +209,17 @@ input[type="number"]{
     color: rgb(25, 181, 209);
 }
 .input:focus {
-    border: 2px solid rgb(25, 180, 207);
+    border: 2px solid rgba(83, 127, 36, 0.5);
 }
 #TD:focus {
-    border: 2px solid rgb(25, 180, 207);
+    border: 2px solid rgba(83, 127, 36, 0.5);
 }
 .submitBtn {
     display: block;
     margin-left: auto;
     padding: 15px 30px;
     border: none;
-    background-color: rgb(25, 180, 207);
+    background-color: rgba(83, 127, 36);
     color: white;
     border-radius: 6px;
     cursor: pointer;
@@ -248,7 +228,7 @@ input[type="number"]{
 }
 
 .submitBtn:hover {
-    background-color: #0b66dd;
+    background-color:rgb(63, 63, 33);
     transform: translateY(-2px);
 }
 .formulario_login{
@@ -314,33 +294,18 @@ input[type="number"]{
 /* *********************/
   /* seccion bienvenida */
   /* *********************/
-		/* esta seccion no embarca al header, esta seccion es la parte del contenedor de bienvenida */
-		
-        #inicio {
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, .2)),
-            url('../Img/prueba.webp');
-            background-size: cover;
-            background-position: center;
-            background-position: center center;
-            height: 100vh;
-        }
-        
 		/* HEADER */
 		/* esta es la seccion del header */
         /* este es el header por defecto sin responsividad */
 
         #inicio .contenido header {
-            /* background-color: rgba(0, 0, 0, .8); */
-            /* background-image: linear-gradient(135deg, #fcfcfc 0%, #0c63fb 100%); */
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
-            background-color: rgba(0, 128, 255, 0.5);
-
-
+            -webkit-backdrop-filter: blur(0px);
+            backdrop-filter: blur(1px);
+            background-color: rgba(135, 116, 89, 0);
             position: fixed;
             width: 100%;
 			/* esta es la sombra del header */
-            box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.849);	
+       
         }
 		
 		
@@ -348,7 +313,7 @@ input[type="number"]{
 		/* esta es la propiedad del logo, (tick_credit) */
         .logo a {
             text-decoration: none;
-            color: #d3ffdc;
+            color: #000;
         }
 
 
@@ -369,7 +334,7 @@ input[type="number"]{
 		/* El logo es el unico h1 del header */
         #inicio .contenido .contenido-header h1 {
             text-align: center;
-            color: #d3ffdc;
+            color: #000;
 			text-transform: capitalize;
         }
 		
@@ -388,7 +353,7 @@ input[type="number"]{
 		/* los link que hay en el header */
         #inicio .contenido header .contenido-header nav ul li a {
             text-decoration: none;
-            color: #fff;
+            color: #000;
             margin: 0 12px;
             font-weight: 400;
             transition: .5s;
@@ -461,8 +426,8 @@ input[type="number"]{
         }
         /* span de tickcredit */
         #inicio .contenido .presentacion .articulop h2 span {
-            font-size: 40px;
-            background: linear-gradient(aqua,gray);
+            font-size: 50px;
+            background: linear-gradient(rgb(63, 63, 33),rgb(122, 120, 40));
             -webkit-background-clip: text;
             color: transparent;  
         }
@@ -471,74 +436,35 @@ input[type="number"]{
             margin: 16px auto;
             font-size: 18px;  
         }
-        /* contenedor de la imagen de la seccion de bienvenida */
-        .imgen img {
-            width: 730px ;
-            height: 700px;
-            margin: 0 auto;
-            margin-top: 40px;
-            padding: 100px;
-        }
-        #icono-nav {
-            color: #fff;
-            display: none;
-        }
-        /* propiedades del boton liquido */
-        .cta {
-            position: relative;
-            padding: 20px 41px;
+       
+        
+
+          .cta  {
             display: flex;
             text-decoration: none;
             text-transform: uppercase;
             width: 150px;
             height: 10px;
-            overflow: hidden;
-            border-radius: 20px;
-          }
-          .cta span {
-            color: #000;
+           color: #fff;
             font-weight: bold;
-            display: flex;
+            padding: 20px;
             justify-content: center;
             align-items: center;
             font-size: 15px;
-            font-family: Arial;
-            z-index: 1;
+            border-radius: 20px 100px 15px;
+            font-family: helvetica;
+            border: solid #ccc 1.5px;
+
           }
-          .cta .liquid {
-            position: absolute;
-            top: -80px;
-            left: 0;
-            width: 200px;
-            height: 200px;
-            background: #4973ff;
-            box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
-            transition: .4s;
+
+          .cta:hover {
+              background-color: #5F6A40;
+              transition: .3s;
           }
-          .cta .liquid::after,
-          .cta .liquid::before {
-            content: '';
-            width: 200%;
-            height: 200%;
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translate(-50%, -75%);
-            background: rgba(245, 228, 228, 0);
-          }
-          .cta .liquid::before {
-            border-radius: 45%;
-            background: rgb(247, 245, 245);
-            animation: animate 5s linear infinite;
-          }
-          .cta .liquid::after {
-            border-radius: 40%;
-            background: rgba(255, 251, 251, 0.5);
-            animation: animate 10s linear infinite;
-          }
-          .cta:hover .liquid{
-            top: -120px;
-          }
+
+
+          
+        
           @keyframes animate {
             0% {
               transform: translate(-50%, -75%) rotate(0deg);
@@ -584,7 +510,7 @@ input[type="number"]{
         /* seccion funciones */
         /* *********************/
         .funciones {
-            background-image: linear-gradient(135deg, #f1f3f6 0%, #bed3f7 100%);
+            background-image: linear-gradient(to right, #c1c161 0%, #c1c161 0%, #d4d4b1 20%);
         }
         #sobremi {
             max-width: 1100px;
@@ -715,7 +641,9 @@ input[type="number"]{
         
         #contacto {
             padding: 100px 15px;
-            background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+            background-color: #CDDCDC;
+            background-image: radial-gradient(at 50% 100%, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), linear-gradient(to bottom, rgba(255,255,255,0.25) 0%, rgba(0,0,0,0.25) 100%);
+            background-blend-mode: screen, overlay;
             background-size: cover;
         }
         
@@ -769,6 +697,7 @@ input[type="number"]{
             cursor: pointer;
             transition: .5s;
             padding: 10px 15px !important;
+            background-color: #5F6A40;
         }
 
 
@@ -783,9 +712,10 @@ input[type="number"]{
         /* *********************/
         /* seccion footer */
         /* *********************/
-        
         footer {
-            background-color: #000;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            background-color: rgba(0, 128, 255, 0.5);
             color: #fff;
             text-align: center;
             padding: 30px 0;
