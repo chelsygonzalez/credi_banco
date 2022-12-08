@@ -12,10 +12,21 @@ session_start();
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Gestion:Admin</title>
     <style>
+
+    body {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(2px);
+        background-image: url('../Img/agro.webp');
+        background-size: cover;
+        background-position: center;  
+    }
+    /* este content all no es muy util, mas bien es para reformatear */
     .content-all {
         padding: 0;
         margin: 0;
     }
+
+    /* este es el width 100% */
     .cas {
         display: flex;
         justify-content: center;
@@ -24,87 +35,113 @@ session_start();
         top: 0;
         left: 0;
         width: 100%;
-        height: 100vh;
-        background: url('../Img/prueba.webp');
-        background-size: cover;
-        background-position: center;        
+        height: 85vh;      
     }
-    /* este admin es el contenedor de la primera caja  */
-
-    .close {
-        display: block;
-    background-image: linear-gradient(to top, #30cfd0 0%, #330864 70%);
-        
+    .cas h2 {
+        margin-bottom: 53px;
     }
-    .admin{
-        border: 1px solid rgb(65, 60, 60);
-        background-color: #ccc;
+    /* se aplican las mismas propiedades del header del sistema gestor */
+    header {
+        position: block;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         padding: 20px;
-        max-width: 800px;
-        border-radius: 10px;
+    }
+     header .logo a {
+        text-decoration: none;
+        padding: 20px;
+        color: #000;
+    }
+    header .navegation  a {
+        text-decoration: none;
+        font-size: 28px;
+    }
+    
+    /* este es el contenedor central */
+    .admin{
+        background-color: rgba(222, 182, 65, 0.9);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(1px);
+        padding: 20px;
+        border-radius: 300px 40px;
+        padding: 80px;
+        font-size: 30px;
+        box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.5);
+        transition: .6s;
+
+    }
+
+    .admin:hover {
+        box-shadow: 0px 1px 40px rgba(134, 137, 93, 9);	
+        transition: .7s;
+    }
+    form h2 {
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+        padding: 10px;
+    }
+    /* todos los que hay dentro del contenedor central */
+    
+    .cns {
         display: flex;
         justify-content: center;
-        font-size: 30px;
-        padding-bottom: 2cm;
-        box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.5);
-        background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
-
+        padding: 30px;
     }
-
-    h1 {
-        background: #D1D1D1;
-        border: solid #fff 1px;
-    }
-
-    form * {
+    input[type="submit"]{
+        background: #ccc;
+        transition: .5s;
+        font-size: 25px;
         padding: 8px;
     }
-    /* estas son las propiedades del boton Buscar, mas abajo la clase "trash" es la fuente  */
-    .buscarbut{
-        display: flex;
-        margin-top: 0.4cm;
-        justify-content: center;
-    }
-    .trash{
-        font-size: 15px;
-        border-radius: 3cm;
-    }
-    a:hover {
-        background: #2271b3;
-        padding: 10px;
-        color: #fff;
-        text-decoration: none;
-    }
     input[type="submit"]:hover {
-        background: #2271b3;
+        background: #283e06;
         color:#fff;
+        transition: .5s;
     }
+    /* casilla de busqueda */
     input[type="number"]{
         -webkit-appearance: textfield !important;
         margin: 0;
-        -moz-appearance:textfield !important;
+        letter-spacing: 3.5px;
+        border-radius: 16px;
+        text-align: center;
     }
-
     </style>
 </head>
 <body>
-<?php 
-$fechaActual = date('d-m-Y');
-    ?>
-
 <section class="content-all">
+<header>
+        <div class="logo">
+            <h1><a href="#">AgroCredit</a></h1>
+        </div>
+            <div class="navegation">
+                <nav>
+                    <ul>
+                        <a href="#" class="cto">
+                            <span>
+                                salir
+                            </span></a>
+                    </ul>
+                </nav>
+            </div>
+    </header>
     <!-- Esta parte es la primera caja del la pagina -->
     <div class="cas">
-<h2><?php echo $fechaActual ?></h2>
+        
+<h2><?php     date_default_timezone_set('America/New_York'); 
+$fechaActual = date('d-m-Y- h:iA'); echo $fechaActual; ?></h2>
         <Section class="admin">
-            
             <div class="Id-datos">
                 <!-- mando el formulario a la consulta -->
                 <form action="consulta.php" method="get">
                     <div>
-                        <h1>Hola Administrador!</h1>
-                        <label>No. Documento: <input type="text" name="codigo" required="" autocomplete= "off"><br></label>
-                        <input type="submit" value="Consultar">
+                        <h2>¡Hola Administrador!</h2>
+                        <label>No. Documento: <input type="number" name="codigo" required="" min="0" autocomplete= "off"><br></label>
+                        <div class="cns">
+                            <input type="submit" value="Consultar">
+                        </div>
                     </div>
                 </form>
             </div>

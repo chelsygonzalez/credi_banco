@@ -53,9 +53,6 @@ $cantidad = (float) $_POST['cantidad'];
     //que tipo de operacion se realizara
     //la cantidad que se le dio al input
 
-
-
-
 if(empty($action)) {
     echo '
     <script>
@@ -98,13 +95,17 @@ function operacion($conexion, float $cantidad, string $action, float $saldo, $co
     //siguiente opcion
     } else if($action == "egreso") {
         $resultado = $saldo - $cantidad;
+        if($resultado < 0) {
+            echo '
+            <script>
+                alert("El resultado es menor a 0");
+                window.location = "Gestor.php";
+            </script>
+            ';
+        exit();
+        }
         $transaccion = "INSERT INTO transacciones (valor_tx, correo_usu1, fecha_tx) VALUES ('$cantidad', '$primary',NOW())";
         $transaccion = $conexion->query($transaccion);
-        //no hace falta una verificacion
-
-
-        //la misma inserccion al campo de usuario
-        var_dump($resultado);
         $saldoingreso = "UPDATE usuario SET saldo_usu = '$resultado' WHERE id_usuario = '$codigo'";
         $queryingreso= mysqli_query($conexion, $saldoingreso);
         if($queryingreso) {

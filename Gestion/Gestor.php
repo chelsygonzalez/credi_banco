@@ -14,43 +14,77 @@ $row = $resultado->fetch_assoc();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestor</title>
+    <script>
+        function preguntar() {
+            if(confirm('¿Estas seguro que deseas Borrar esta Cuenta?')) {
+                window.location.href = "./delete.php";
+            }
+        }
+    </script>
+
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <style>
-
+        
+    /* tiene un blur sutil */
     body {
-        background: #4b9197;
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(6px);
+        background-image: url('../Img/agro.webp');
+        background-size: cover;
+        background-position: center;  
     }
+    /*seccion del header */
+    header {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(11px);
+        position: block;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+    }
+    /* el logo de tick credit */
+     header .logo a {
+        text-decoration: none;
+        padding: 20px;
+        color: #000;
+    }
+    /* este es el contenedor central */
     .contenedor2admin{
-    background-color: #D7D7D7;  
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(1px);
+    background-color: rgba(222, 182, 65, 0.5);
     margin: auto;
-    max-width: 1000px;
-    border: solid #000 1px;
+    max-width: 1300px;
     font-family: helvetica;
-    border-radius: 10px;
-    box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.5);	
+    transition: .5s;	
     }
+    /* un hover para la seccion */
+    .contenedor2admin:hover {
+        box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.9);
+        transition: .5s;	
+    }
+
+    /* seccion header del contenedor central */
     .close {
     padding: 8px;
     display: block;
     /* background: #3F76B7; */
-    background-image: linear-gradient(to top, #30cfd0 0%, #330864 70%);
+    background-image: linear-gradient(to top, #fff 0%, #445a14 30%);
     color: #fff;
     font-weight: bold;
     }
-
-
+    /* para posicionar los elementos de este header */
     .close div {
         display: flex;
         justify-content: space-between;
         font-size: 20px;
     }
-
     .close div p {
         padding: 5px;
         margin: 0;
     }
-
-
+    /* la x de salir */
     .close div a {
     background: #cb3234;
     padding: 8px;
@@ -59,39 +93,45 @@ $row = $resultado->fetch_assoc();
     }
 
 /* contenedor del article del modal */
+/* nombre del usuario y la fecha */
 .modalusu {
     display: flex;
     justify-content: space-between;
     margin-left: 26px;
-    font-size: 27px;
+    font-size: 29px;
     margin-top: 0.2cm;
 }
+/* saldo del usuario */
 .modalsaldo{
-
     display: flex;
     justify-content: center;
-    font-size: 32px;
+    font-size: 35px;
     font-weight: bold;
     margin-top: 0.3cm;
     letter-spacing: 2px;
     margin: auto;
-    max-width: 500px;
-    background: #D1D1D1;
+    max-width: 300px;
+    background: #445a14;
+    color: #fff;
+    border-radius: 30px 30px;
     border: solid #fff 1px;
     box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.15);
 }
+/* foto del usuario */
 .modalfoto {
     display: flex;
     padding-right: 10px;
-    justify-content: end;
+    margin-top: 0.3cm;
+    justify-content: center;
     align-items: center;
 }
 .modalfoto img {
     border-radius: 30px;
 }
+/* titulo de que deseas realizar */
 .bloque-transaccion h2 {
     text-align: center;
-    font-size: 30px;
+    font-size: 36px;
 }
 /* seccion de los botones de egreso e ingreso */
 .radio {
@@ -102,52 +142,53 @@ $row = $resultado->fetch_assoc();
     margin-right: 0;
     cursor: pointer;
     font-size: 30px;
+    /* estas propiedades permiten comenzar a editar los radio */
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
 }
+/* este es el circulo radio */
 .radio .check {
     position: absolute;
     top: 15%;
     left: 0;
     height: 25px;
     width: 25px;
-    background-color: #eee;
-    border: 1px solid #000;
-    border-radius: 50%;
-    
-
+    background-color: #d9ef9f;
+    border: 3px solid #000;
+    border-radius: 30%;
 }
-.radio .check:after {
-    content: "";
-    position: absolute;
-    display: none;
-}
+/* cuando paso por encima del radio se ilumina el borde */
 .radio:hover input ~ .check {
-    border: 2px solid #3ba4e0;
+    border: 3px solid #808000;
 }
+/* al seleccionar el radio */
 .radio input:checked ~ .check {
-    background-color: #2489C5;
+    background-color: #ff8000;
     border:none;
 }
-.radio .check:after {
-    top: 9px;
-    left: 9px;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: white;
-}
+/* este ya es el contenedor del tipo de intercambio */
 .tipo-detranssaccion{
 font-size: 30px;
 padding: 20px;
 display: flex;
 justify-content: space-evenly;
-background: #D1D1D1;
+background: #808000;
+margin: auto;
+max-width: 1200px;
 border: solid #fff 1px;
-box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.15);	
+transition: .5s;	
 
+}
+.tipo-detranssaccion:hover{
+box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.5);	
+transition: .5s;	
+}
+input[type="button"]:hover{
+    background-color: #ff8000;
+    color: #fff;
+    cursor: pointer;
 }
 /* boton de la cantidad */
 .accion-end{
@@ -160,6 +201,11 @@ box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.15);
 input[type="number"]{
     letter-spacing: 3px;
     font-size: 21px;
+    -webkit-appearance: textfield !important;
+    margin: 0;
+}
+input[type="number"]:focus{
+    border:solid 2px #808000;
 }
 .boton-end{
     display: flex;
@@ -172,23 +218,59 @@ input[type="number"]{
     padding: 10px;
     width: 200px;
     cursor: pointer;
+    margin-bottom: 80px;
+    transition: .5s;
+
 }
+/* boton de guardar  */
 input[type="submit"]:hover{
-    background: #ff8000;
+    background: #d8a800;
     box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.5);	
+    color: #fff;
+    font-weight: bold;
+    transition: .5s;
 }
 
-#link {
+.del {
+    padding: 30px;
+    font-size: 18px;
+}
+.del a {
     text-decoration: none;
+    border: solid 2px #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    background: #d1d1d1;
+    color: #000;
+    transition: .5s;
+}
+.del a:hover{
+    background: #e5be01;
+    transition: .5s;
 }
     </style>
 
 </head>
 <body>
-    <!-- Esta es la segunda caja del codigo  -->
     <?php 
-$fechaActual = date('d-m-Y');
+    date_default_timezone_set('America/New_York'); 
+$fechaActual = date('d-m-Y- h:iA');
     ?>
+    <header>
+        <div class="logo">
+            <h1><a href="#">AgroCredit</a></h1>
+        </div>
+            <div class="navegation">
+                <nav>
+                    <ul>
+                        <a href="#" class="cto">
+                            <span>
+                            </span></a>
+                    </ul>
+                </nav>
+            </div>
+    </header>
+
 
         <div class="contenedor2admin">
             <div class="close">
@@ -200,7 +282,7 @@ $fechaActual = date('d-m-Y');
 
             <div class="modalusu">&nbsp<?php echo utf8_decode($row['nomb_usu'])."&nbsp".($row['apell_usu']);  ?>
             <span><?php echo $fechaActual ?></span></div>
-            <div class="modalsaldo">&nbsp$<?php echo utf8_decode($row['saldo_usu'])."";  ?> </div>
+            <div class="modalsaldo">&nbsp$<?php echo number_format($row['saldo_usu'])."";  ?> </div>
             <div class="modalfoto">&nbsp  
                 <?php if(isset($row['foto_usu'])) {?>
                                 <table border="1">
@@ -211,15 +293,11 @@ $fechaActual = date('d-m-Y');
                         <?php  
                         }
                         else{?>
-<<<<<<< HEAD
                             <table border="1">
                                 <td>
-                                    <img height="140px" src="../Img/pinky89.jpg">
+                                    <img height="140px" src="../Img/predeterminada.jpg">
                                 </td>
                             </table>
-=======
-                                <img height="100px" src="../Img/pinky89.jpg">
->>>>>>> 208bf5783fe3414495da115210f34af13cf5ad19
                          <?php } ?>
             </div>
             <!-- Esta seccion es la parte del tipo de transaccion que se realizara -->
@@ -239,23 +317,25 @@ $fechaActual = date('d-m-Y');
                                     <span class="check"></span>
                                 </label>
                                 </div>
-                                <input type="button" value="Borrar" onclick="limpiar();">
+                                <input type="button" value="limpiar" onclick="limpiar();">
                             </div>
                     </section>
     
                             <div class="accion-end">
-                            Monto:&nbsp<input name="cantidad" type="number" required="">
+                            Monto:&nbsp<input name="cantidad" type="number" min="0" required="">
                             </div>
                             <div class="boton-end">
                                 <input type="submit" class="save-end" value="Guardar">
                             </div>
                         </form>
-                        <!-- con el return le indicamos que primero debe realizar la validacion -->
-                        <form action="./delete.php">
-                        <input type= "submit" id="link"  value="eliminar"></a>
-                        </form>
-        </div> 
-        
+
+                        <div class="del">
+                            <form action="./delete.php">
+                                <p>Presiona este boton si quieres eliminar esta cuenta</P>
+                                <a href= "#" id="" onclick="preguntar()">Eliminar</a>
+                            </form>
+                        </div>
+        </div>    
     <script>
         //Es necesario ya que los input de tipo radio no se pueden deseleccionar
         function limpiar(){

@@ -303,7 +303,7 @@ $row = $resultado->fetch_assoc();
             </div>
             <!-- aqui esta el saldo -->
             <div class="money">
-                <div class="saldo">$<?php echo utf8_decode($row['saldo_usu']);  ?></div>
+                <div class="saldo">$<?php echo number_format($row['saldo_usu']);  ?></div>
             </div>
             <hr>
             <br>
@@ -327,7 +327,7 @@ $row = $resultado->fetch_assoc();
                     //cerramos etiqueta de php
                     ?>
                     <tr>
-                        <td>$&nbsp<?php echo $data['valor_recar'] ?></td>
+                        <td>$&nbsp<?php echo number_format($data['valor_recar']) ?></td>
                         <td><?php echo $data['fecha_recar']?></td>
                     </tr>
                     <?php
@@ -338,7 +338,7 @@ $row = $resultado->fetch_assoc();
         </div>
         <div>
         <table border="1">
-        <caption>Tu historial de transacciones</caption>
+        <caption>Tu historial de Compras</caption>
             <tr>
                 <!-- insertando columnas -->
                 <!-- <th>Nombre</th> -->
@@ -355,7 +355,7 @@ $row = $resultado->fetch_assoc();
                     //cerramos etiqueta de php
                     ?>
                     <tr>
-                        <td>$&nbsp<?php echo $datatx['valor_tx'] ?></td>
+                        <td>$&nbsp<?php echo number_format($datatx['valor_tx']) ?></td>
                         <td><?php echo $datatx['fecha_tx']?></td>
                     </tr>
                     <?php

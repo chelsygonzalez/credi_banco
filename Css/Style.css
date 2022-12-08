@@ -178,7 +178,6 @@
 input[type="number"]{
     -webkit-appearance: textfield !important;
     margin: 0;
-    -moz-appearance:textfield !important;
 }
 
 
@@ -195,7 +194,7 @@ input[type="number"]{
     left: 15px;
     padding: 0 4px;
     background-color: white;
-    color: #8d8d9c;
+    color: #babac7;
     font-size: 16px;
     transition: 0.4s;
     z-index: 0;
@@ -712,7 +711,7 @@ input[type="number"]{
             -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             background-color: rgba(0, 128, 255, 0.5);
-            color: #fff;
+            color: #000;
             text-align: center;
             padding: 30px 0;
         }
