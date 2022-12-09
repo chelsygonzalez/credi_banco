@@ -32,7 +32,7 @@ include_once('conexion_be.php');
     if(mysqli_num_rows($verificacion_usuario) > 0){
         echo '
         <script>
-            alert("Este usuario ya esta registrado, intenta con otro");
+            alert("Este documento ya esta registrado, intenta con otro");
             window.location = "../index.html";
         </script>
         ';
