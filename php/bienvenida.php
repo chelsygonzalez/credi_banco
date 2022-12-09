@@ -316,7 +316,7 @@ $row = $resultado->fetch_assoc();
                 <th>Fecha</th>
             </tr>
             <?php
-            $query = mysqli_query($conexion, "SELECT * FROM recargas");
+            $query = mysqli_query($conexion, "SELECT * FROM recargas WHERE correo_usu2= '$info'");
             //cuantos valores hay dentro de mi query
             $result = mysqli_num_rows($query);
             if ($result > 0) {
@@ -344,7 +344,7 @@ $row = $resultado->fetch_assoc();
                 <th>Fecha</th>
             </tr>
             <?php
-            $querytx = mysqli_query($conexion, "SELECT * FROM transacciones");
+            $querytx = mysqli_query($conexion, "SELECT * FROM transacciones WHERE correo_usu1= '$info'");
             //cuantos valores hay dentro de mi query
             $resulttx = mysqli_num_rows($querytx);
             if ($resulttx > 0) {
