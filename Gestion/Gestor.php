@@ -21,10 +21,7 @@ $row = $resultado->fetch_assoc();
             }
         }
     </script>
-
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <style>
-        
     /* tiene un blur sutil */
     body {
         -webkit-backdrop-filter: blur(10px);
@@ -220,7 +217,6 @@ input[type="number"]:focus{
     cursor: pointer;
     margin-bottom: 80px;
     transition: .5s;
-
 }
 /* boton de guardar  */
 input[type="submit"]:hover{
@@ -230,7 +226,6 @@ input[type="submit"]:hover{
     font-weight: bold;
     transition: .5s;
 }
-
 .del {
     padding: 30px;
     font-size: 18px;
@@ -270,8 +265,6 @@ $fechaActual = date('d-m-Y- h:iA');
                 </nav>
             </div>
     </header>
-
-
         <div class="contenedor2admin">
             <div class="close">
                 <div>
@@ -279,7 +272,6 @@ $fechaActual = date('d-m-Y- h:iA');
                 <a href="buscador.php">X</a>
                 </div>
             </div>
-
             <div class="modalusu">&nbsp<?php echo utf8_decode($row['nomb_usu'])."&nbsp".($row['apell_usu']);  ?>
             <span><?php echo $fechaActual ?></span></div>
             <div class="modalsaldo">&nbsp$<?php echo number_format($row['saldo_usu'])."";  ?> </div>
@@ -320,7 +312,6 @@ $fechaActual = date('d-m-Y- h:iA');
                                 <input type="button" value="limpiar" onclick="limpiar();">
                             </div>
                     </section>
-    
                             <div class="accion-end">
                             Monto:&nbsp<input name="cantidad" type="number" min="0" required="">
                             </div>
@@ -335,7 +326,7 @@ $fechaActual = date('d-m-Y- h:iA');
                                 <a href= "#" id="" onclick="preguntar()">Eliminar</a>
                             </form>
                         </div>
-        </div>    
+      </div>    
     <script>
         //Es necesario ya que los input de tipo radio no se pueden deseleccionar
         function limpiar(){

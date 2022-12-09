@@ -35,14 +35,8 @@ $txdel = mysqli_query($conexion, $deletetx);
 $deletercr = "DELETE FROM recargas WHERE correo_usu2 = '$correo'";
 $rcrdel = mysqli_query($conexion, $deletercr);
 
-
-
-
     $delete = "DELETE FROM usuario WHERE id_usuario= '$info'";
     $bye = mysqli_query($conexion, $delete);
-
-
-
     //valido si todas las opciones son True
     if($txdel &&  $rcrdel && $bye) {
         echo '
@@ -65,10 +59,6 @@ $rcrdel = mysqli_query($conexion, $deletercr);
         ';
     exit();
     }
-
-
-
-
  mysqli_close($conexion);
     
 ?>

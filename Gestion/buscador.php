@@ -1,7 +1,5 @@
 <?php
-
 session_start();
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +23,6 @@ session_start();
         padding: 0;
         margin: 0;
     }
-
     /* este es el width 100% */
     .cas {
         display: flex;
@@ -57,7 +54,6 @@ session_start();
         text-decoration: none;
         font-size: 28px;
     }
-    
     /* este es el contenedor central */
     .admin{
         background-color: rgba(222, 182, 65, 0.9);
@@ -69,9 +65,7 @@ session_start();
         font-size: 30px;
         box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.5);
         transition: .6s;
-
     }
-
     .admin:hover {
         box-shadow: 0px 1px 40px rgba(134, 137, 93, 9);	
         transition: .7s;

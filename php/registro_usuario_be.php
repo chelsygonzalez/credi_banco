@@ -8,11 +8,7 @@ include_once('conexion_be.php');
     $contraseña= $_POST["contraseña"];
     $sql= "INSERT INTO usuario (id_usuario,cel_usu, nomb_usu,apell_usu, correo_usu,contra_usu)
      VALUES  ('$identificacion','$celular', '$nombres', '$apellidos', '$correo', '$contraseña')";
-
-    
     // or trigger_error("Query failed! SQL- Error: ".mysqli_error($conexion), E_USER_ERROR);
-
-
     //verificar que el correo no se repita en la base de datos
     $consulta_correo = "SELECT * FROM usuario WHERE correo_usu = '$correo'";
     //verificar que el numero de usuario no se repita en la base de datos
@@ -38,7 +34,6 @@ include_once('conexion_be.php');
         ';
         exit();
     }
-
     //la query que se va a ejecutar
     $resul= mysqli_query($conexion, $sql);
     //si las variables estan llenas, se procede a ingresar al perfil
@@ -58,7 +53,6 @@ include_once('conexion_be.php');
             </script>
         ';
         exit();
-    
     }
     mysqli_close($conexion);
 ?>
