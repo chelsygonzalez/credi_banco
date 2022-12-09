@@ -43,7 +43,7 @@ $row = $resultado->fetch_assoc();
             }
             body {
                 background: linear-gradient(rgba(82, 82, 82, 0.397), rgba(255, 255, 255, 0)),
-                url('../Img/profile.jpg'); 
+                url('../Img/agricult.webp'); 
                 background-size: cover;
                 background-position: center;
                 background-position: center center; 	
@@ -58,9 +58,7 @@ $row = $resultado->fetch_assoc();
             }
             /*seccion del header */
             header {
-                -webkit-backdrop-filter: blur(10px);
-                backdrop-filter: blur(10px);
-                background-color: hsla(210, 100%, 50%, 0.502);
+                
                 position: block;
                 display: flex;
                 justify-content: space-between;
@@ -68,18 +66,18 @@ $row = $resultado->fetch_assoc();
                 padding: 20px;
                 width: 100%;
                 /* esta es la sombra del header */
-                box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.849);	
+            
             }
             header .logo {
                 text-decoration: none;
-                color: #d3ffdc;
-                font-size: 12px;
+             
+                font-size: 13px;
                 
             }
             header .logo a {
                 text-decoration: none;
                 padding: 20px;
-                color: #d3ffdc;
+                color: black;
             }
             /* boton de cerrar sesion */
             header .navegation .cto {
@@ -107,7 +105,7 @@ $row = $resultado->fetch_assoc();
                 justify-content: center;
                 align-items: center;
                 font-size: 15px;
-                font-family: Arial;
+                font-family: helvetica;
                 z-index: 1;
             }
             @keyframes animate {
@@ -145,8 +143,8 @@ $row = $resultado->fetch_assoc();
                 height: auto;
                 -webkit-backdrop-filter: blur(1000px);
                 backdrop-filter: blur(5px);
-                background-color: rgba(0, 128, 255, 0.5);
-                border-radius: 15px;
+                background-color: rgba(255, 255, 255, 0.911);
+                border-radius: px;
                 box-shadow: 0px 1px 15px rgb(0, 0, 0);	
             }
             .content-state .articles-group .image .push {
@@ -161,7 +159,7 @@ $row = $resultado->fetch_assoc();
                 padding: 10px;
                 text-decoration: none;
                 outline: none;
-                background-color: #3e9efff1;
+                background-color: black;
                 color: white; 
                 text-shadow: 0px 0px 1px black;
                 cursor: pointer;
@@ -182,7 +180,7 @@ $row = $resultado->fetch_assoc();
             .you-money {
                 /* padding: 50px; */
                 max-width: 1200px;
-                color: white;
+                color: black;
             }
             .you-money .money {
                 font-size: 40px;

@@ -25,18 +25,18 @@ $row = $resultado->fetch_assoc();
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <style>
         
-    /* tiene un blur sutil */
+   
     body {
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(6px);
-        background-image: url('../Img/agro.webp');
+        
+        background-image: url('../Img/agricult.webp');
         background-size: cover;
         background-position: center;  
+        
     }
     /*seccion del header */
     header {
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(11px);
+        
+       
         position: block;
         display: flex;
         justify-content: space-between;
@@ -48,15 +48,17 @@ $row = $resultado->fetch_assoc();
         text-decoration: none;
         padding: 20px;
         color: #000;
+        font-family: helvetica;
     }
     /* este es el contenedor central */
     .contenedor2admin{
+    
     -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(1px);
+    backdrop-filter: blur(5px);
     background-color: rgba(222, 182, 65, 0.5);
     margin: auto;
     max-width: 1300px;
-    font-family: helvetica;
+    
     transition: .5s;	
     }
     /* un hover para la seccion */
@@ -70,9 +72,10 @@ $row = $resultado->fetch_assoc();
     padding: 8px;
     display: block;
     /* background: #3F76B7; */
-    background-image: linear-gradient(to top, #fff 0%, #445a14 30%);
-    color: #fff;
+    background-color: #445a14;
+    color: white;
     font-weight: bold;
+    font-family: helvetica;
     }
     /* para posicionar los elementos de este header */
     .close div {
@@ -83,9 +86,11 @@ $row = $resultado->fetch_assoc();
     .close div p {
         padding: 5px;
         margin: 0;
+
     }
     /* la x de salir */
     .close div a {
+    width: 19px; 
     background: #cb3234;
     padding: 8px;
     text-decoration: none;
@@ -329,10 +334,7 @@ $fechaActual = date('d-m-Y- h:iA');
                             </div>
                         </form>
 
-                        <div class="del">
-                            <form action="./delete.php">
-                                <p>Presiona este boton si quieres eliminar esta cuenta</P>
-                                <a href= "#" id="" onclick="preguntar()">Eliminar</a>
+                       
                             </form>
                         </div>
         </div>    

@@ -692,7 +692,7 @@ input[type="number"]{
             cursor: pointer;
             transition: .5s;
             padding: 10px 15px !important;
-            background-color: #5F6A40;
+            background-color: #5f6a40;
         }
 
 
@@ -710,10 +710,11 @@ input[type="number"]{
         footer {
             -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
-            background-color: rgba(0, 128, 255, 0.5);
-            color: #000;
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
             text-align: center;
             padding: 30px 0;
+            
         }
         
         footer a {
@@ -722,7 +723,11 @@ input[type="number"]{
             display: inline-block;
             margin: 5px;
             font-size: 26px;
+            
         }
+
+
+
         /* *****************************/
         /* seccion de la responsividad*/
         /* ***************************/

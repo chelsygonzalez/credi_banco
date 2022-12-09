@@ -16,7 +16,8 @@ session_start();
     body {
         -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(2px);
-        background-image: url('../Img/agro.webp');
+        background-image: url('../Img/agricult.webp');
+        background-position: fixed;
         background-size: cover;
         background-position: center;  
     }
@@ -81,6 +82,7 @@ session_start();
         font-size: 40px;
         font-weight: bold;
         padding: 10px;
+        
     }
     /* todos los que hay dentro del contenedor central */
     
