@@ -57,7 +57,7 @@ $row = $resultado->fetch_assoc();
             }
             /*seccion del header */
             header {
-                background-color: rgba(223,221,191);   
+                background-color: rgba(255,202 ,102);   
                 position: block;
                 display: flex;
                 justify-content: space-between;
@@ -146,7 +146,7 @@ $row = $resultado->fetch_assoc();
             }
 
             .inforel {
-                border: solid red 1px;
+                
             }
             
             .push  input{
@@ -234,14 +234,14 @@ $row = $resultado->fetch_assoc();
                 justify-content: space-between;
                 padding:30px;
                 padding-top: 0;
-                border: solid red 1px;
+                
             }
             table{
                 color:#000;
                 display: flex;
                 flex-direction: column;
                 text-align: center;
-                border: solid red 1px;
+                
             }
             /* separa las tablas */
             .acciones {
