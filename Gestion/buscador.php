@@ -9,7 +9,9 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Gestion:Admin</title>
+    
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap');
 
     body {
         -webkit-backdrop-filter: blur(10px);
@@ -18,6 +20,7 @@ session_start();
         background-position: fixed;
         background-size: cover;
         background-position: center;  
+        font-family: 'Montserrat';
     }
     /* este content all no es muy util, mas bien es para reformatear */
     .content-all {
@@ -32,8 +35,8 @@ session_start();
         flex-direction: column;
         top: 0;
         left: 0;
-        width: 100%;
         height: 85vh;      
+        border: solid red 1px;
     }
     .cas h2 {
         margin-bottom: 53px;
@@ -46,11 +49,14 @@ session_start();
         align-items: center;
         padding: 20px;
     }
+    /* el logo de tickcredit */
      header .logo a {
         text-decoration: none;
         padding: 20px;
         color: #000;
+        font-size: 28px;
     }
+    /* el link de salir */
     header .navegation  a {
         text-decoration: none;
         font-size: 28px;
@@ -62,10 +68,11 @@ session_start();
         backdrop-filter: blur(1px);
         padding: 20px;
         border-radius: 300px 40px;
-        padding: 80px;
-        font-size: 30px;
+        padding: 40px;
+        font-size: 27px;
         box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.5);
         transition: .6s;
+        border: solid red 1px;
     }
     .admin:hover {
         box-shadow: 0px 1px 40px rgba(134, 137, 93, 9);	
@@ -78,8 +85,7 @@ session_start();
         padding: 10px;
         
     }
-    /* todos los que hay dentro del contenedor central */
-    
+    /* seccion del boton de consultar */
     .cns {
         display: flex;
         justify-content: center;
@@ -102,8 +108,10 @@ session_start();
         margin: 0;
         letter-spacing: 3.5px;
         border-radius: 16px;
+        max-width: 410px;
         text-align: center;
     }
+
     </style>
 </head>
 <body>

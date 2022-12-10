@@ -22,19 +22,15 @@ $row = $resultado->fetch_assoc();
         }
     </script>
     <style>
-        
-    /* tiene un blur sutil */
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap');
     body {
-        
         background-image: url('../Img/agricult.webp');
         background-size: cover;
         background-position: center;  
-        
+        font-family: 'Montserrat';
     }
     /*seccion del header */
     header {
-        
-       
         position: block;
         display: flex;
         justify-content: space-between;
@@ -46,7 +42,6 @@ $row = $resultado->fetch_assoc();
         text-decoration: none;
         padding: 20px;
         color: #000;
-        font-family: helvetica;
     }
     /* este es el contenedor central */
     .contenedor2admin{
@@ -56,7 +51,6 @@ $row = $resultado->fetch_assoc();
     background-color: rgba(222, 182, 65, 0.5);
     margin: auto;
     max-width: 1300px;
-    
     transition: .5s;	
     }
     /* un hover para la seccion */
@@ -73,7 +67,6 @@ $row = $resultado->fetch_assoc();
     background-color: #445a14;
     color: white;
     font-weight: bold;
-    font-family: helvetica;
     }
     /* para posicionar los elementos de este header */
     .close div {
