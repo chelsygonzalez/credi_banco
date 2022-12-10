@@ -276,19 +276,11 @@ $fechaActual = date('d-m-Y- h:iA');
             <div class="modalsaldo">&nbsp$<?php echo number_format($row['saldo_usu'])."";  ?> </div>
             <div class="modalfoto">&nbsp  
                 <?php if(isset($row['foto_usu'])) {?>
-                                <table border="1">
-                                    <td>
-                                        <img height="100px" src="data:image;base64, <?php echo base64_encode($row['foto_usu']) ?>">
-                                    </td>
-                                </table>
+                                <img height="100px" src="data:image;base64, <?php echo base64_encode($row['foto_usu']) ?>">
                         <?php  
                         }
                         else{?>
-                            <table border="1">
-                                <td>
-                                    <img height="140px" src="../Img/predeterminada.jpg">
-                                </td>
-                            </table>
+                                <img height="140px" src="../Img/predeterminada.jpg">
                          <?php } ?>
             </div>
             <!-- Esta seccion es la parte del tipo de transaccion que se realizara -->
