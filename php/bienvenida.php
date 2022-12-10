@@ -58,13 +58,14 @@ $row = $resultado->fetch_assoc();
             }
             /*seccion del header */
             header {
-                
+                background-color: rgba(223,221,191);   
                 position: block;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 padding: 20px;
                 width: 100%;
+                box-shadow: 0px 1px 20px black;
                 /* esta es la sombra del header */
             
             }
@@ -81,7 +82,7 @@ $row = $resultado->fetch_assoc();
             }
             /* boton de cerrar sesion */
             header .navegation .cto {
-                position: relative;
+                
                 padding: 15px 5px;
                 display: flex;
                 text-decoration: none;
@@ -92,14 +93,18 @@ $row = $resultado->fetch_assoc();
                 letter-spacing: 2px;
                 transition: 0.3s;
                 font-size: 100px; 
+                background: black;
+                border-radius: 20px 100px 15px;
+                justify-content: center;
             }
             header .navegation .cto:hover {
-                background: #0080ff;
-                box-shadow: 0px 0px 20px #0080ff, 0px 0px 40px #0080ff, 0px 0px 80px #0080ff;
-                justify-content: end;
+                background: black;
+                                
+                
             }
             header .navegation .cto span {
                 color: rgb(243, 234, 234);
+                background: black;
                 font-weight: bold;
                 display: flex;
                 justify-content: center;
@@ -165,25 +170,37 @@ $row = $resultado->fetch_assoc();
                 cursor: pointer;
             }
             .photo img {
-                width: 400px;
-                border-radius: 300px;
-                margin: 30px;
+                width: 140px;
+               
+                margin: 20px;
+                margin-left: 10px;
+                border: 2.5px solid black;
+                shadow: 0px 17px
             }
             .photo  {
                 display: flex;
-                justify-content: center;
+                justify-content: start;
                 
             }
             /* ====================================== */
 
             /* esta es la seccion donde esta el nombre y el saldo */
+
+            .you-name{
+                justify-content: center;
+                margin-left: 15px;
+                font-size: 26px;
+            }
+
             .you-money {
                 /* padding: 50px; */
-                max-width: 1200px;
+                max-width: 250px;
                 color: black;
+                justify-content: start;
+                margin: 17px;
             }
             .you-money .money {
-                font-size: 40px;
+                font-size: 20px;
                 padding: 20px;
                 color: black;
             }
@@ -194,15 +211,15 @@ $row = $resultado->fetch_assoc();
             }
             /* nombre */
             .you-money .title {
-                padding: 10px;
-                font-size: 23px;
+               
+                font-size: 19px;
                 display: flex;
                 justify-content: center;
                 flex-direction: column;
                 text-align: center;
             }
             .you-money .title p {
-                padding: 10px;
+                
             }
             .tables {
                 display: flex;
@@ -279,9 +296,14 @@ $row = $resultado->fetch_assoc();
                             <?php  
                             }
                             else{?>
-                                <img src="../Img/predeterminada.jpg">
+                              <img src="../Img/predeterminada.jpg">  
                         <?php } ?>
+
+                       
             </div>
+            <div class="you-name"> 
+                        PonKy
+                        </div>
                 <!-- para el boton de la subida de la foto -->
                 <div class="push">
                     <form name="subir-foto" action="./estado_profile/foto.php" method="POST" enctype="multipart/form-data">
@@ -289,13 +311,14 @@ $row = $resultado->fetch_assoc();
                         <input type="file" name="nimagen" required=""/><br>
                         <!-- actualizar -->
                         <input type="submit" name="subir-imagen" value="Actualizar" required=""/>
+                        
                     </form>
                 </div>
-        </div>
-        <div class="you-money">
+
+                <div class="you-money">
             <div class="title">
                 <hr>
-                <h2>¡Hola <?php echo utf8_decode($row['nomb_usu']);  ?>&nbsp<?php echo utf8_decode($row['apell_usu'])."!";  ?>  </h2>
+                <h2> <?php echo utf8_decode($row['nomb_usu']);  ?>&nbsp<?php echo utf8_decode($row['apell_usu'])."!";  ?>  </h2>
                 <br>
                 <p>Actualmente tu saldo es de:</p>
             </div>
@@ -305,6 +328,9 @@ $row = $resultado->fetch_assoc();
             </div>
             <hr>
             <br>
+                
+        </div>
+       
     <div class="tables">
         <div class="recar">
          <table border="1">
