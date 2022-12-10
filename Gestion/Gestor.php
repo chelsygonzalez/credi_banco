@@ -310,8 +310,10 @@ $fechaActual = date('d-m-Y- h:iA');
                                 <input type="submit" class="save-end" value="Guardar">
                             </div>
                         </form>
-
-                       
+                        <div class="del">
+                            <form action="./delete.php">
+                                <p>Presiona este boton si quieres eliminar esta cuenta</P>
+                                <a href= "#" id="" onclick="preguntar()">Eliminar</a>
                             </form>
                         </div>
       </div>    
