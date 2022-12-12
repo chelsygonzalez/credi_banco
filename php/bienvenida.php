@@ -62,11 +62,21 @@ $row = $resultado->fetch_assoc();
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                padding: 20px;
+                padding: 5px;
                 width: 100%;
                 box-shadow: 0px 1px 20px black;
                 /* esta es la sombra del header */
             }
+
+            .navegation {
+                padding: 20px;
+                display: block;
+            }
+
+
+
+
+
             header .logo {
                 text-decoration: none;
                 font-size: 13px;
@@ -81,8 +91,8 @@ $row = $resultado->fetch_assoc();
 
             /* boton de cerrar sesion */
             header .navegation .cto {
-                padding: 15px 5px;
-                display: flex;
+                padding: 10px 15px;
+                /* display: flex; */
                 text-decoration: none;
                 text-transform: uppercase;
                 width: 100px;
@@ -90,27 +100,25 @@ $row = $resultado->fetch_assoc();
                 overflow: hidden;
                 letter-spacing: 2px;
                 transition: 0.3s;
-                font-size: 100px; 
+                font-size: 15px; 
                 background: black;
+                color: #fff;
                 border-radius: 20px 100px 15px;
                 justify-content: center;
             }
-            header .navegation .cto:hover {
-                background: black;
-                                
-                
-            }
-            header .navegation .cto span {
-                color: rgb(243, 234, 234);
-                background: black;
-                font-weight: bold;
+            nav {
                 display: flex;
-                justify-content: center;
-                align-items: center;
-                font-size: 15px;
-                font-family: helvetica;
-                z-index: 1;
+                list-style: none;
             }
+            nav li {
+                margin-right: 5px;
+            }
+            
+            header .navegation .cto:hover {
+                background: #fff;
+                color: #000;
+            }
+
 
 
 
@@ -146,12 +154,12 @@ $row = $resultado->fetch_assoc();
             }
 
             .inforel {
-                
+                border: solid #ccc 1px;
+                padding: 20px;
             }
             
             .push  input{
-                display: flex;
-                flex: content;
+            
                 padding: 10px;
                 text-decoration: none;
                 outline: none;
@@ -161,8 +169,7 @@ $row = $resultado->fetch_assoc();
                 cursor: pointer;
             }
             .photo img {
-                width: 140px;
-               
+                width: 340px;
                 margin: 20px;
                 margin-left: 10px;
                 border: 2.5px solid black;
@@ -177,21 +184,15 @@ $row = $resultado->fetch_assoc();
 
             /* esta es la seccion donde esta el nombre y el saldo */
 
-            .you-name{
-                justify-content: center;
-                margin-left: 15px;
-                font-size: 26px;
-            }
-
+            
             .you-money {
-                /* padding: 50px; */
-                max-width: 250px;
+                padding: 10px;
+                max-width: 300px;
                 color: black;
-                justify-content: start;
                 margin: 17px;
             }
             .you-money .money {
-                font-size: 20px;
+                font-size: 30px;
                 padding: 20px;
                 color: black;
             }
@@ -202,16 +203,17 @@ $row = $resultado->fetch_assoc();
             }
             /* nombre */
             .you-money .title {
-               
-                font-size: 19px;
+                font-size: 18px;
                 display: flex;
                 justify-content: center;
                 flex-direction: column;
                 text-align: center;
             }
-            .you-money .title p {
-                
+
+            input[type="file"] {
+                width: 250px;
             }
+
             
 
 
@@ -257,12 +259,30 @@ $row = $resultado->fetch_assoc();
                 border:solid 2px black;
                 padding: 10px;
                 font-size: 18px;
-                background: #ccc;
+                background-color: rgba(255,202 ,102);   
             }
             /* color de los titulos de las celdas */
             th{
-                background-color: #666;
+                background: #5F6A40;
                 color:white;
+            }
+
+            .del {
+                padding: 30px;
+                font-size: 18px;
+            }
+            .del a {
+                 text-decoration: none;
+                 border: solid 2px #ccc;
+                 border-radius: 10px;
+                padding: 10px;
+                background: #d1d1d1;
+                color: #000;
+                transition: .5s;
+            }
+            .del a:hover{
+                background: #e5be01;
+                transition: .5s;
             }
 
 
@@ -296,11 +316,17 @@ $row = $resultado->fetch_assoc();
 
             /* Responsividad de los elementos */
             @media screen and (max-width: 900px) {
+                header {
+                    flex-direction: column;
+                }
+                
+                
                 .content-state .articles-group {
                     gap: 0;
                     height: auto;
                     width: auto;
                 }
+
                 .tables .secciones {
                     flex-direction: column-reverse;
                     align-items: center;
@@ -313,20 +339,35 @@ $row = $resultado->fetch_assoc();
     </style>
 </head>
 <body>
+
+
 <header>
         <div class="logo">
-            <h1><a href="#">TickCredit</a></h1>
+            <h1><a href="#">AgroCredit</a></h1>
         </div>
             <div class="navegation">
+
+
+
                 <nav>
-                    <ul>
-                        <a href="./estado_profile/logout.php" class="cto">
-                            <span>Salir
-                            </span></a>
-                    </ul>
+                        <li><a href="#" class="cto">Inicio</a><li>
+                        <li><a href="./pasarela/Pasarela.php" class="cto">Recargar</a><li>
+                        <li><a href="./estado_profile/logout.php" class="cto">Salir</a><li>
                 </nav>
             </div>
 </header>
+
+
+
+
+
+
+
+
+
+
+
+
 <section class="content-state">
         <!-- titulo -->
         <div class="Welcome">
@@ -348,11 +389,10 @@ $row = $resultado->fetch_assoc();
                         <?php  
                         }
                         else{?>
-                            <img src="../Img/predeterminada.jpg">  
+                            <img  src="../Img/predeterminada.jpg">  
                  <?php } ?>       
             </div>
 
-                        <div class="you-name"> PonKy</div>
 
                 <!-- para el boton de la subida de la foto -->
                 <div class="push">
@@ -367,7 +407,7 @@ $row = $resultado->fetch_assoc();
                 <div class="you-money">
                     <div class="title">
                     <hr>
-                        <h2> <?php echo utf8_decode($row['nomb_usu']);  ?>&nbsp<?php echo utf8_decode($row['apell_usu'])."!";  ?>  </h2>
+                        <h2>¡<?php echo utf8_decode($row['nomb_usu']);  ?>&nbsp<?php echo utf8_decode($row['apell_usu'])."!";  ?>  </h2>
                         <br>
                         <p>Actualmente tu saldo es de:</p>
                     </div>
@@ -443,7 +483,14 @@ $row = $resultado->fetch_assoc();
                         }
                         ?>
                     </table>
+                    
                 </div>
+            </div>
+            <div class="del">
+                    <form action="./delete.php">
+                        <p>Presiona este boton para limpiar los historiales</P><br>
+                        <a href= "./limpiar.php">Limpiar</a>
+                    </form>
             </div>
         </div>
 

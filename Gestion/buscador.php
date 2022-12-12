@@ -36,7 +36,6 @@ session_start();
         top: 0;
         left: 0;
         height: 85vh;      
-        border: solid red 1px;
     }
     .cas h2 {
         margin-bottom: 53px;
@@ -66,13 +65,11 @@ session_start();
         background-color: rgba(222, 182, 65, 0.9);
         -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(1px);
-        padding: 20px;
         border-radius: 300px 40px;
-        padding: 40px;
+        padding: 45px;
         font-size: 27px;
         box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.5);
         transition: .6s;
-        border: solid red 1px;
     }
     .admin:hover {
         box-shadow: 0px 1px 40px rgba(134, 137, 93, 9);	
@@ -92,9 +89,12 @@ session_start();
         padding: 30px;
     }
     input[type="submit"]{
-        background: #ccc;
+        background: #5e4a09;
+        color: #fff;
+        border: none;
+        border-radius: 15px;
         transition: .5s;
-        font-size: 25px;
+        font-size: 23px;
         padding: 8px;
     }
     input[type="submit"]:hover {
