@@ -18,6 +18,21 @@
             background-position: center center;
             height: 100vh;
         }
+        
+        .cta {
+              transition: .3s;
+           background-color: #808000;
+          }
+        
+        .cta:hover {
+              transition: .3s;
+           background-color: #5F6A40;
+          }
+
+          #inicio .contenido .presentacion .articulop {
+            color: #ffffff;
+            font-weight: bold;
+        }
     
     </style>
 </head>
@@ -48,14 +63,6 @@
 
                 <h2>Iniciar sesión</h2>
 
-                <div class="Contenedor-entrada">
-                    <select>
-                        <option value="SURTIDOS(COLOMBIA)">SURTIDOS(COLOMBIA)</option>
-                        <option value="FRUBER RAUL">FRUBER RAUL</option>
-                    </select>
-                    <label for="" class="label"></label>
-                </div>
-
                     <div class="Contenedor-entrada">
                         <input type="email" class="input" placeholder="" name="correo" id="correo" required>
                         <label for="" class="label">Correo electrónico</label>
@@ -72,6 +79,13 @@
                 <!-- Registro -->
             <form action="./php/registro_usuario_be.php" class="formulario_register" method="post" enctype="multipart/form-data" autocomplete="off" name="registro">
                     <h2>Registrarse</h2>
+                    <div class="Contenedor-entrada">
+                        <select>
+                            <option value="SURTIDOS(COLOMBIA)">SURTIDOS(COLOMBIA)</option>
+                            <option value="FRUBER RAUL">FRUBER RAUL</option>
+                        </select>
+                        <label for="" class="label"></label>
+                    </div>
                     <div class="Contenedor-entrada">
                         <input type="text" name="nombres" class="input" placeholder="" id="nombres" required>
                         <label for="nombres" class="label">Nombre(s)</label>

@@ -122,7 +122,7 @@ $row = $resultado->fetch_assoc();
     align-items: center;
 }
 .modalfoto img {
-    border-radius: 30px;
+    border: solid 1px black;
 }
 /* titulo de que deseas realizar */
 .bloque-transaccion h2 {
